@@ -1,0 +1,15 @@
+html - hyper text markup language
+we create web pages using html
+html describe the page.
+
+to create a html page / html document /web page we have to write html code
+
+we need a text editor to write the html code | in html we create
+elements such as
+text, media(image,video,audio), list, table, form(input), button, frames, etc.
+using 
+type of tags in html
+1.container tag <tagname> </tagname>
+opening and closing tag
+2.self-closing tag <tagname attr />
+3.empty tag <tagname> (a empty does not require any attribute)
