@@ -1,0 +1,100 @@
+1.we want to store task data so that all components can access the data for that we have created a context 
+
+import React, { useState, useContext, createContext, useEffect } from 'react'
+
+const TaskContext = createContext()
+
+const TaskProvider = ({ children }) => {
+
+  // store data into local storage and load the data into tasks variable at render
+
+  let [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks)); // convert string back to array
+    }
+
+  }, [])
+
+  const saveTasks = (task) => {
+
+    setTasks((prev) => {
+      const updatedTasks = [...prev, task]
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // store array as string
+      return updatedTasks
+    })
+  }
+
+  return (
+    <TaskContext.Provider value={{ tasks, saveTasks }}>
+      {children}
+    </TaskContext.Provider>
+  )
+}
+
+const useTask = () => useContext(TaskContext)
+
+export { TaskProvider, useTask }
+
+
+2.then we wrap all the components in this context so that all components should get access for tasks state variable
+
+import React from 'react'
+
+import { MdAddTask } from "react-icons/md";
+import TaskForm from './components/sections/TaskForm';
+
+import { TaskProvider } from './contextAPI/Task';
+import DisplayTasksTable from './components/sections/DisplayTasksTable';
+
+const App = () => {
+  return (
+    <>
+      <TaskProvider>
+        <div className='title py-10'>
+          <h1 className='text-center flex gap-2 items-center justify-center text-3xl'>
+            <MdAddTask className='text-accentColor' /> <span>To Do List</span>
+          </h1>
+        </div>
+        <DisplayTasksTable />
+        <TaskForm />
+      </TaskProvider>
+    </>
+  )
+}
+
+export default App
+
+3.to make sure that our data don't flush will we refresh/reload the page we use localstorage to store the tasks array temp. 
+
+4.limitation
+localstorage was unable to store array 
+then we store the a string with array inside of it
+
+const saveTasks = (task) => {
+
+    setTasks((prev) => {
+      const updatedTasks = [...prev, task]
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // store array as string
+      return updatedTasks
+    })
+  }
+
+then we want to get all the tasks while our components is being mounted ant the start
+for that we wrote a effect hook
+
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks)); // convert string back to array
+    }
+
+  }, [])
+
+line 4 is converting the data which is a string which has an array inside back to a normal array.
+
+5. while display the table we make sure that we are maping array not any other data type for that
+
+{Array.isArray(tasks) ? show/map table : don't map table }
