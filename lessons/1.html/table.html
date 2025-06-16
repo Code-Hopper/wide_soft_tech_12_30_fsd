@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- thead - table header -->
+    <!-- tbody - table body -->
+    <!-- tfoot - table footer -->
+    <!-- these are the schematic tags for table(ex. just like html has schematic tag such as header, main & footer) -->
+    <!-- tr - table row -->
+    <!-- to create column we can use td table data / th table heading -->
+
+
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>person 1</td>
+                <td>9766696550</td>
+                <td>nagpur</td>
+            </tr>
+            <tr>
+                <td>person 2</td>
+                <td>8857032120</td>
+                <td>nagpur</td>
+            </tr>
+            <tr>
+                <td>person 3</td>
+                <td>8237895726</td>
+                <td>pune</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">end of table</th>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- is a grid layout | 2-D row & column -->
+
+    <!-- spaning row & col colspan="number" -->
+
+    <!-- <table border="1">
+        <tr>
+            <th>name</th>
+            <th>phone</th>
+            <th>address</th>
+        </tr>
+        <tr>
+            <td>person 1</td>
+            <td>7897984546</td>
+            <td rowspan="2">nagpur</td>
+        </tr>
+        <tr>
+            <td>person 2</td>
+            <td>7897984546</td>
+        </tr>
+        <tr>
+            <th colspan="3">end of table</th>
+        </tr>
+    </table> -->
+
+    <table border="1">
+        <tbody>
+            <tr>
+                <th rowspan="2">heading</th>
+                <th>students</th>
+                <th colspan="3">details </th>
+            </tr>
+            <tr>
+                <th>id</th>
+                <th>student data</th>
+                <th>department</th>
+                <th>roll number</th>
+            </tr>
+            <tr>
+                <th rowspan="4">student list</th>
+                <td>1</td>
+                <td>
+                    <table border="1">
+                        <tr>
+                            <td>person 1</td>
+                            <td>91 9766696550</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">nagpur</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Computer Science</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <table border="1">
+                        <tr>
+                            <td>person 2</td>
+                        </tr>
+                        <tr>
+                            <td>91 9766696551</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Electronic</td>
+                <td>1235</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <table border="1">
+                        <tr>
+                            <td>person 3</td>
+                        </tr>
+                        <tr>
+                            <td>91 9766696552</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Electrical</td>
+                <td>1236</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                 <td>
+                    <table border="1">
+                        <tr>
+                            <td>person 4</td>
+                        </tr>
+                        <tr>
+                            <td>91 9766696554</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Civil</td>
+                <td>1237</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
