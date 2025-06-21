@@ -1,0 +1,37 @@
+  #i1 {
+      color: green;
+  }
+
+  #i1 {
+      color: orange;
+  }
+
+  /* selectors */
+  /* universal * ,  by tagname tagname , by classname .classname, by id #id */
+
+  * {
+      color: red;
+      /* for text/foreground/content color  */
+      /* solid(red,green, yellow), hex #ffff, rgb(), rgba() */
+  }
+
+  h1 {
+      color: blue;
+  }
+
+
+  li {
+      color: purple;
+  }
+
+  .first {
+      color: black;
+  }
+
+  /* priority of selectors */
+
+  /* universal < tagname < classname < id < inline-css */
+
+  /* if we are using a same selector to change a same rule then the selector which is assigned latest will get it's effects */
+
+  /* !important */
