@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            --img-address: url("./image.png");
+        }
+
+        body {
+            height: 300vh;
+        }
+
+        #element1 {
+            width: 1200px;
+            height: 1000px;
+            background-color: red;
+            background-image: var(--img-address);
+            background-size: contain;
+            /* background-size: contain;
+            /* auto, contain, cover */
+            /* reduce the size of image so that it can fit completely inside of a container */
+            /* strech the image to cover the container */
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* start(left), end(right),top, bottom, center */
+            /* no-repeat, repeat-x, repeat-y */
+            background-attachment: scroll;
+            /* scroll, fixed */
+            color: white;
+        }
+
+        #element2 {
+            width: 500px;
+            height: 500px;
+            background-color: green;
+            background-image: var(--img-address);
+        }
+
+        /* study background shorthand property */
+        /* background: */
+    </style>
+
+</head>
+
+<body>
+
+    <div id="element1">
+        <h1>this is some heading</h1>
+    </div>
+
+    <div id="element2">
+        <h1>this is some heading</h1>
+    </div>
+</body>
+
+</html>
