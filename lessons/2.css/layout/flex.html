@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- flex - single directional layout -->
-    <!-- at once we can change layout either row wise or column wise -->
-
-    <!-- parent properties  -->
-
-    <!-- child properties  -->
-
     <style>
         * {
             margin: 0;
@@ -20,45 +13,92 @@
         }
 
         .parent {
-            width: 600px;
-            height: 600px;
-            border: 0.2rem solid black;
+            width: 616px;
+            height: 616px;
+            /* max-width: fit-content; */
+            border: 0.25rem solid black;
             margin: 5rem auto;
-            /* margin-left: auto;
-            margin-right: auto; */
             display: flex;
+            padding: 0.5rem;
+
             flex-direction: row;
-            /* row(default), column , row-reverse, col-reverse */
-            flex-wrap: wrap;
-            /* wrap, nowrap */
-            gap: 1rem;
+            /* row(default), column, row-reverse, column-reverse */
+
+            gap: 0.5rem;
+
+            flex-wrap: no-wrap;
+            /* nowrap, wrap */
+
+            /* alignment */
+
+            /* vertically, horizontally */
+
+            /* justify-content: ; 
+            if direction is row then justify-content will align items horizontally | if direction is col then justify-content will align items vertically | 
+            align-items: ; 
+            if direction is row then align-item will align items vertically | 
+            if direction is col then align-item will align items horizontally | 
+            */
+
+            /* justify-content: space-evenly; */
+            /* start, end,center , space-between/around/evenly*/
+            /* align-items: center; */
+            /* start, end, center, stretch, flex-start, flex-end, baseline */
+
+            justify-content: center;
+            align-items: center;
         }
+
+        /* child properties */
+        /* order, flex-basis, flex-grow, flex-shrink */
+
+        /* initial value for order for each child element from flex layout is 0 */
 
         .child {
             width: 200px;
             height: 200px;
             background-color: red;
             color: white;
-            /* font-size: 3rem; */
+            font-weight: bold;
+            font-size: 2rem;
+            order: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
         }
+        /* .child-1{
+            order: 1;
+            flex-grow: 1;
+            0
+            flex-shrink: 2;
+            1
+        }
+        .child-2{
+            order: 2;
+            flex-grow: 1;
+        } */
+
+        .child-1{
+            flex-basis: 300px;
+        }
+
+        /* task : shorthand for grow shrink basis */
+
     </style>
 
 </head>
 
 <body>
-
     <div class="parent">
-        <div class="child child-1">child-1</div>
-        <div class="child child-2">child-2</div>
-        <div class="child child-3">child-3</div>
-        <div class="child child-4">child-4</div>
-        <div class="child child-5">child-5</div>
-        <div class="child child-6">child-6</div>
-        <div class="child child-7">child-7</div>
-        <div class="child child-8">child-8</div>
-        <div class="child child-9">child-9</div>
+        <div class="child child-1">1</div>
+        <div class="child child-2">2</div>
+        <div class="child child-3">3</div>
+        <!-- <div class="child child-4">4</div>
+        <div class="child child-5">5</div>
+        <div class="child child-6">6</div>
+        <div class="child child-7">7</div>
+        <div class="child child-8">8</div>
+        <div class="child child-9">9</div> -->
     </div>
-
 </body>
 
 </html>
