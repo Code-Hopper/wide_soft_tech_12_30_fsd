@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- multi-directional layout | row & column -->
+
+    <!-- parent properties -->
+    <!-- child properties -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: 800px;
+            height: 800px;
+            border: 1px solid black;
+            margin: 5rem auto;
+            padding: 1rem;
+            background: black;
+
+            display: grid;
+            row-gap: 1rem;
+            column-gap: 1rem;
+
+            /* number and size of row & column */
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            align-items: center;
+            justify-items: center;
+        }
+
+        /* 1/4 1/4 2/4*/
+
+        .child {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .child-1{
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .child-2{
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .child-3{
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+            grid-row-start: 1;
+            grid-row-end: 2;
+        } */
+
+        .child-1 {
+            /* grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 4; */
+
+            grid-column: 1 / 4;
+            grid-row: 1/2;
+        }
+
+        .child-4 {
+            width: 100px;
+            height: 100px;
+            /* grid-row-start: 2;
+            grid-row-end: 4;
+
+            grid-column-start: 3;
+            grid-column-end: 4; */
+
+            grid-column: 3 / 4;
+            grid-row: 2 / 4;
+            /* cell alignment */
+            align-self: center;
+            justify-self: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="child child-1">1</div>
+        <div class="child child-2">2</div>
+        <div class="child child-3">3</div>
+        <div class="child child-4">4</div>
+        <div class="child child-5">5</div>
+        <div class="child child-6">6</div>
+    </div>
+
+</body>
+
+</html>

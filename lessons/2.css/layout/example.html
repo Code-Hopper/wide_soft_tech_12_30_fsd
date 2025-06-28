@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;padding: 0;font-family: sans-serif;
+        }
+        .parent {
+            width: 500px;
+            height: fit-content;
+            background-color: rgb(31, 31, 31);
+            padding: 2rem;
+            margin: 5rem auto;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .question {
+            padding: 1.5rem 0;
+            color: rgba(255, 255, 255, .75);
+            border-bottom: 0.001rem solid rgba(255, 255, 255, .25);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .icon{
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 100%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div>
+            <h3>People also ask :</h3>
+        </div>
+        <div class="question">
+            <span>What is a Flexbox layout?</span>
+            <div class="icon"><img src="./arrow-down.png" alt=""></div>
+        </div>
+        <div class="question">
+            <span>What is the use of flex layout?</span>
+            <div class="icon"><img src="./arrow-down.png" alt=""></div>
+        </div>
+        <div class="question">
+            <span>What is flex in CSS style?</span>
+            <div class="icon"><img src="./arrow-down.png" alt=""></div>
+        </div>
+        <div class="question">
+            <span>How to establish flex layout in CSS?</span>
+            <div class="icon"><img src="./arrow-down.png" alt=""></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
