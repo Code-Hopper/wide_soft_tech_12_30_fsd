@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .parent {
+            width: fit-content;
+            border: 1px solid black;
+        }
+
+        .element {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /* top, bottom, left (start), right(end)  */
+            position: relative;
+            /* top: 500px;
+            left: 500px;
+            bottom: 0;
+            right: 0; */
+            top: 500px;
+            left: 200px;
+            z-index: 1;
+            /* static (default), relative, absolute, fixed, sticky  */
+
+            /* direction- top, right, bottom, left, z-index(z-axis (order of stacking))  */
+
+            /*relative - element change it's position in relation to it;s original position */
+
+            /* absolute - element will position itself by screen starting points (if parent is static) */
+
+            /* if we have a non-staic parent element then a absolute child element will be bounded inside of the parent's area */
+
+            /* fixed - same as of absolute element but won't scroll */
+
+            /* sticky - make itself fixed when about to leave the view-port */
+        }
+
+        .parent2 {
+            width: fit-content;
+            border: 1px solid black;
+            margin: 3rem;
+        }
+
+        .element2 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            position: relative;
+            top: 500px;
+            left: 200px;
+        }
+
+        .parent3 {
+            width: fit-content;
+            border: 1px solid black;
+            margin: 3rem;
+            padding: 3rem;
+        }
+
+        .element3 {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            position: absolute;
+            top: 700px;
+            left: 200px;
+            z-index: 2;
+            /* right: 0; */
+            /* bottom: 0; */
+        }
+
+        .relative-parent {
+            width: 500px;
+            height: 500px;
+            margin: 3rem;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .absolute-child {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: absolute;
+            top: -20%;
+            right: -20%;
+        }
+
+        .fixed-element {
+            width: 500px;
+            height: 500px;
+            background-color: green;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .sticky-element {
+            width: 100%;
+            height: 200px;
+            background-color: aqua;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="relative-parent">
+        <div class="absolute-child"></div>
+    </div>
+
+    <div class="sticky-element"></div>
+
+    <div class="parent">
+        <div class="element"></div>
+    </div>
+
+    <div class="parent2">
+        <div class="element2"></div>
+    </div>
+
+    <div class="parent3">
+        <div class="element3"></div>
+    </div>
+
+    <!-- <div class="fixed-element"></div> -->
+
+
+</body>
+
+</html>
