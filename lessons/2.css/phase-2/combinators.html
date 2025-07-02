@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+
+    <!-- universal, tagname, classname, id -->
+
+    <!-- child selector,tag has class/id, direct child selector, same parent elements (+ , ~), comman properties selector, selector,...,selector -->
+
+    <!-- selector1 selector2{ property:value } -->
+
+    <style>
+        /* div h1 {
+            color: red;
+        }
+
+        div div ul li h1 span {
+            color: blue;
+        }
+
+        div span {
+            color: green !important;
+        }
+
+        .first h1 {
+            color: aqua;
+        } */
+
+        /* h1 {
+            color: red;
+        }
+
+        h1.second {
+            color: blue;
+        } */
+
+        /* h1.second span {
+            color: red;
+        } */
+
+        /* div>h1 {
+            color: red;
+        } */
+
+        .parent {
+            padding: 1rem;
+            margin: 3rem auto;
+            border: 1px solid black;
+            width: fit-content;
+        }
+
+        /* .parent > div.element{}
+
+        .parent * {}
+
+        .parent .element
+        .parent div
+        .parent div.element */
+
+
+        .parent>.element1,
+        .element2,
+        .element3 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: inline-block;
+        }
+
+        .element2 + .element3 {
+            background-color: blue !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="element1"></div>
+        <div class="element2"></div>
+        <div class="element3"></div>
+    </div>
+
+    <!-- <h1>this is some HEADING</h1>
+
+    <div class="first">
+        <h1>this is some <span>HEADING</span> parent div</h1>
+    </div>
+
+    <h1 class="second">this is other h1</h1>
+
+    <h1>this is other other h1</h1>
+
+    <div>
+        <div>
+            <h1 class="second">this is some heading</h1>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h1 class="second">this is some <span>heading</span></h1>
+                </li>
+            </ul>
+        </div>
+        <h1>this is some heading</h1>
+        <h1>this is some <span>heading</span></h1>
+        <h1 class="second">this is some heading</h1>
+    </div> -->
+
+</body>
+
+</html>
