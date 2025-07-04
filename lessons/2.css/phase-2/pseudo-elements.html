@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- ::element -->
+    <!-- ::element, ::before, ::after, ::placeholder -->
+
+    <style>
+        #element1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 5rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #element1::after {
+            content: "";
+            top: 0%;
+            left: -100%;
+            background-color: yellow;
+        }
+
+        #element1::before {
+            content: "";
+            bottom: 0%;
+            right: -100%;
+            background-color: green;
+        }
+
+        #element1::before,
+        #element1::after {
+            color: white;
+            font-weight: bold;
+            font-size: 3rem;
+            display: block;
+            width: 100%;
+            height: 20px;
+            color: black;
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        #element1:hover::before {
+            width: 100%;
+            right: 0;
+        }
+
+        #element1:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
 
 </head>
+
 <body>
-    
+
+    <div id="element1"></div>
+
 </body>
+
 </html>

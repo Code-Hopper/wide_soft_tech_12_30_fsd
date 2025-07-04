@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- :selector | :hover :focus :cheked(special for checkbox) -->
+    <!-- :selector | :hover :focus :cheked(special for checkbox), :nth-child(), :first-child, :last-child, :nth-child(odd/even) -->
 
     <style>
         .element {
-            width: 200px;
+            width: fit-content;
             height: 200px;
             background-color: red;
+            color: white;
+            /* overflow-y: scroll;
+            /* vertical */
+            /* overflow-x: scroll; */
+            /* horizontal */
         }
 
         .element:hover {
@@ -22,15 +27,59 @@
         input:focus {
             background-color: red;
         }
+
+        .parent {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            /* start, end,center, space-[between,around, evenly] */
+            align-items: center;
+            /* start, end, flex-[start,end], baseline, center, stretch */
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        /* items, content : parent properties */
+        /* self - child properties */
+        /*
+        flex
+        parent 
+        justify-content
+        align-items */
+        /* grid
+        parent
+        justify-items
+        align-items
+        child(cell)
+        align-self
+        justify-self */
+
+        div:nth-child(1) {
+            background-color: yellow !important;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <div class="element"></div>
+    <!-- <div class="element"></div>
 
     <input type="text" placeholder="enter something">
+
+    <div class="parent">
+        <div class="child"></div>
+    </div> -->
+
+    <!-- group:nth-child(1) -->
+
+
 
 </body>
 

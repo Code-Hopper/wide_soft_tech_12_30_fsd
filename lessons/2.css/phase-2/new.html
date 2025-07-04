@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin: 3rem;
+        }
+
+        div:nth-child(1) {
+            background-color: yellow;
+        }
+
+        .container {
+            border: 1px solid black;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        /* ul > li:nth-child(2) {
+            color: yellow;
+            background-color: black;
+        } */
+
+        /* ul > li:first-child {
+            color: yellow;
+            background-color: black;
+        } */
+
+        /* ul > li:last-child {
+            color: yellow;
+            background-color: black;
+        } */
+
+        ul>li:nth-child(even) {
+            color: yellow;
+            background-color: black;
+        }
+
+        input:focus{
+            color: red;
+            background-color: black;
+            border: none;
+            outline: none;
+        }
+
+        /* element[type="checkbox"]{
+        } */
+
+        .target{
+            height: 200px;
+            background-color: yellow;
+        }
+
+        #chb1:checked + .target{
+            border: 2px solid black;
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <input type="text">
+
+    <input id="chb1" type="checkbox">
+
+    <div  class="target"></div>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <div>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </div>
+
+    <div class="element element1">
+        <h1>this some some element 1</h1>
+        <h1>this some some element 1.1</h1>
+    </div>
+    <div class="element element2">
+        <h1>this some some element 1</h1>
+        <h1>this some some element 1.2</h1>
+    </div>
+    <div class="element element3">
+        <h1>this some some element 1</h1>
+        <h1>this some some element 1.3</h1>
+    </div>
+
+    <div class="container">
+        <div>
+            <h1>this is container child1</h1>
+        </div>
+        <div>
+            <h1>this is container child2</h1>
+        </div>
+        <div>
+            <h1>this is container child3</h1>
+        </div>
+    </div>
+
+    <div>
+        <h1>this is some other div</h1>
+        <div>
+            <h1>this is other div's child</h1>
+        </div>
+        <div>
+            <h1>this is other div's child</h1>
+        </div>
+    </div>
+
+    <ol>
+        <li>item some list item 1</li>
+        <li>item some list item 2</li>
+        <li>item some list item 3</li>
+    </ol>
+
+</body>
+
+</html>
