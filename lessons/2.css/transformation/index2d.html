@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transformation</title>
+
+    <style>
+        .element1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* margin: 3rem auto; */
+            /* position: absolute; */
+            /* left: 50%;
+            top: 50%; */
+            /* transform: translate(500px, 500px); */
+            /* transform: translateX(100px); */
+            /* translate(to move), rotate, scale, skew */
+            /* x,y */
+        }
+
+        .element2 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            left: 100px;
+            top: 100px;
+        }
+
+        .element2::before {
+            content: "";
+            background-color: aqua;
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+        }
+
+        .child {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+
+        .child1 {
+            left: 100%;
+            top: 0;
+        }
+
+        .child2 {
+            left: 100%;
+            top: 100%;
+            background-color: purple;
+        }
+
+        .child3 {
+            left: 0%;
+            top: 100%;
+            background-color: greenyellow;
+        }
+
+        .child4 {
+            left: 50%;
+            top: 50%;
+            background-color: white;
+        }
+
+        .child5 {
+            left: 0;
+            top: 0;
+            background-color: red;
+        }
+        .element3{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            margin: 5rem auto;
+            transform: scale(2,1);
+            /* scaleX() scaleY() */
+        }
+
+        .element4{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: red;
+            color: white;
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+
+        /* rotateX(deg), rotateY(deg), rotate(deg) */
+
+        .sun{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(45deg);
+            /* border: 1px solid black; */
+        }
+
+        .star{
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .center{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 100%;
+        }
+        
+        .element5{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) skew(0deg);
+        }
+
+        .scene{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            perspective: 600px;
+            margin: 5rem auto;
+            position: relative;
+        }
+
+        .new-element{
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) rotateX(45deg);
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div class="element1"></div> -->
+    <!-- <div class="element2">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+        <div class="child child3"></div>
+        <div class="child child4"></div>
+        <div class="child child5"></div>
+    </div> -->
+    
+    <!-- <div class="element3"></div> -->
+
+    <!-- <div class="element4">
+        <h1>element</h1>
+    </div> -->
+
+    <!-- <div class="sun">
+        <div class="star" style=" transform: rotate(45deg);"></div>
+        <div class="star"></div>
+        <div class="center"></div>
+    </div> -->
+
+    <!-- <div class="element5">
+    </div> -->
+    <div class="scene">
+        <div class="new-element"></div>
+    </div>
+
+</body>
+
+</html>
