@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .scene {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 4rem auto;
+            position: relative;
+            perspective: 600px;
+        }
+
+        .element {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+            background-color: black;
+            color: white;
+            font-size: .65rem;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .scene:hover>.element1 {
+            background-color: red;
+            transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg) translateZ(0);
+        }
+
+        .scene:hover>.element2 {
+            background-color: blue;
+            transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg) translateZ(50px);
+        }
+
+        .scene:hover>.element3 {
+            background-color: green;
+            transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg) translateZ(100px);
+        }
+
+        .scene:hover>.element4 {
+            background-color: black;
+            transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg) translateZ(150px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- translate(x,y,z) -->
+
+    <!-- rotateX/Y/Z -->
+
+    <div class="scene">
+        <div class="element element1">
+            <h1>Database</h1>
+        </div>
+        <div class="element element2">
+            <h1>Backend</h1>
+        </div>
+        <div class="element element3">
+            <h1>Fontend</h1>
+        </div>
+        <div class="element element4">
+            <h1>Web Development</h1>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

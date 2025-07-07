@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .scene {
+            width: 500px;
+            height: 500px;
+            perspective: 600px;
+            border: 1px solid black;
+            margin: 5rem auto;
+        }
+
+        .scene:hover > .cube {
+            transform: translate(-50%, -50%) rotateY(360deg) rotateX(360deg);
+        }
+
+        .cube {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translate(-50%, -50%) rotateY(0deg) rotateX(0deg);
+            transition: all 10s ease;
+        }
+
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .face-1 {
+            transform: rotateY(0deg) translateZ(100px);
+            background-color: rgba(255, 0, 0, .5);
+        }
+
+        .face-2 {
+            transform: rotateY(180deg) translateZ(100px);
+            background-color: rgba(0, 255, 0, .5);
+        }
+
+        .face-3 {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(0, 0, 255, .5);
+        }
+
+        .face-4 {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: rgba(0, 255, 255, .5);
+        }
+
+        .face-5 {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: rgba(255, 0, 255, .5);
+        }
+
+        .face-6 {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: rgba(255, 255, 0, .5);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="scene">
+
+        <div class="cube">
+            <div class="face face-1">1</div>
+            <div class="face face-2">2</div>
+            <div class="face face-3">3</div>
+            <div class="face face-4">4</div>
+            <div class="face face-5">5</div>
+            <div class="face face-6">6</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
