@@ -17,6 +17,7 @@
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: auto;
             gap: 1rem;
+            position: relative;
         }
 
         .child {
@@ -24,6 +25,12 @@
             padding: 1rem;
             color: white;
             font-weight: bold;
+            filter: grayscale(1);
+            transition: all 0.5s ease;
+        }
+
+        .child:hover {
+            filter: grayscale(0);
         }
 
         @media screen and (max-width :990px) {
@@ -37,6 +44,26 @@
                 grid-template-columns: repeat(1, 1fr);
             }
         }
+
+        img {
+            filter: grayscale(1);
+            transition: all 0.5s ease;
+        }
+
+        img:hover {
+            filter: grayscale(0);
+        }
+
+        .element{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            background-color: red;
+            transform: translateX(-50%) translateY(-50%) scale(.5,.5);
+        }
+
     </style>
 
 </head>
@@ -48,7 +75,12 @@
         <div class="child child-2">child-2</div>
         <div class="child child-3">child-3</div>
         <div class="child child-4">child-4</div>
+
+        <div class="element"></div>
+
     </div>
+
+    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
 
 </body>
 
