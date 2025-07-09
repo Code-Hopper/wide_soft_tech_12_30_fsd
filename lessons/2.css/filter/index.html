@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- filter : methods -->
+
+    <style>
+        .element {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            filter: brightness(100%) contrast(10%);
+            /* %, 0,1 */
+        }
+
+        img {
+            filter: brightness(100%) contrast(100%) grayscale(0%) invert(0) opacity(50%) blur(10px);
+        }
+
+        /* Gaussian blur */
+
+        .container {
+            /* width: 500px; */
+            height: 500px;
+            font-size: 5rem;
+            border: 1px solid black;
+            text-wrap: nowrap;
+            position: relative;
+        }
+
+        .glass {
+            width: 50%;
+            height: 50%;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            filter: opacity(80%) blur(5px);
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.49);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9.8px);
+            -webkit-backdrop-filter: blur(9.8px);
+            border: 1px solid rgba(255, 255, 255, 1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div class="element"></div>
+
+    <img src="./image2.jpg" alt=""> -->
+
+    <div class="container">
+        <h1>This is some heading</h1>
+        <div class="glass"></div>
+    </div>
+
+</body>
+
+</html>
