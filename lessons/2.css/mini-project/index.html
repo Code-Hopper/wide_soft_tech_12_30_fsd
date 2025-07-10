@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .heros {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            gap: 1rem;
+            flex-direction: row;
+            background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("./nature.jpg");
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .text-data {
+            /* flex-grow: 1; */
+            flex: 1 1;
+            position: relative;
+        }
+
+        .text-data .content {
+            /* width: 50% !important; */
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 1rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .title {
+            color: white;
+            font-size: 5rem;
+            text-wrap: nowrap;
+            font-family: "Dancing Script", cursive;
+        }
+
+        .short-discription {
+            color: rgba(255, 255, 255, .75);
+            font-size: 1.2rem;
+        }
+
+
+        .tag-line {
+            font-size: 2rem;
+            color: lawngreen;
+        }
+
+        .cta {
+            padding: 1rem 2rem;
+            border: none;
+            outline: none;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+        }
+
+        .image-data {
+            flex: 1 1;
+        }
+
+        .image-data img {
+            width: 100%;
+            filter: brightness(120%) contrast(110%);
+        }
+
+        /* rwd for mobile */
+
+        @media screen and (max-width : 576px) {
+            .heros {
+                flex-direction: column;
+            }
+
+            .text-data>.content {
+                width: 100%;
+                align-items: center;
+            }
+
+            .content>* {
+                font-size: initial;
+            }
+
+            .short-discription {
+                display: none;
+            }
+
+            .content>.title {
+                font-size: 3rem;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="heros">
+        <div class="text-data">
+            <div class="content">
+                <h1 class="title">Let's start <b style="color: lightgreen;"> <u>Exploring</u> !</b></h1>
+                <p class="short-discription">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius harum similique iure debitis, totam
+                    explicabo possimus facere earum vero quibusdam quas fuga quisquam assumenda porro doloribus quia
+                    eveniet ea fugit.
+                </p>
+                <h4 class="tag-line">
+                    Lorem ipsum dolor sit amet.
+                </h4>
+                <button class="cta">
+                    <i class="fa-solid fa-compass"></i>
+                    Explore</button>
+            </div>
+        </div>
+        <div class="image-data">
+            <img src="./image.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- study aspect ration property -->
+<!-- create 3 mini-project (must have icon libary) (reponsive) -->
