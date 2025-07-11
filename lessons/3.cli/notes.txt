@@ -1,0 +1,64 @@
+cli - command line interface
+
+UNIX Command line
+
+1970 -  Linux(dibean, red hat), BSD, macOS (heavy command line)
+windows nt, xp, 7, 8 , 8.1, 10, 11 (primary GUI) OS
+
+terminal | command prompt | powershell
+
+all unix based system are root mounted
+
+i.e. the file structure starts with root folder (/) , ~ (home)
+
+pwd- print working directory
+
+ls - list
+
+command -flag/--flag (flag are command modifers)
+
+la -a - list hidden item also
+
+cd (change directory)- to move inside/outside of a folder using escape sequence (./ , ../) 
+
+oprations - CRUD using cli
+
+to create file/folder 
+to read file/folder 
+to update(terminal text editor (vim, nano))/copy/move file/folder 
+to delete file/folder 
+
+touch file.extension (to create a file with that extension)
+touch file1.extension file2.extension file3.extension (to create a file with that extension)
+
+mkdir - make directory
+
+mkdir folderName
+mkdir folderName1 folderName2 folderName3
+
+to read a file
+cat (concatenate) - show complete file data
+head - first 300 charchter only
+tail - last 300 charchter only
+(utf-8, text based)
+
+copy a file/folder
+
+cp source destination
+
+cp -r folder_source folder_destination 
+
+move a file/folder
+
+mv source destination
+
+mv -r folder_source folder_destination 
+
+to delete file/folder 
+
+rm file
+rmdir folder
+rm -rf folder | to remove a non-empty folder
+
+edit vim/nano
+
