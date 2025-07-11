@@ -62,3 +62,6 @@ rm -rf folder | to remove a non-empty folder
 
 edit vim/nano
 
+
+
+some changes
