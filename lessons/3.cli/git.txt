@@ -1,0 +1,22 @@
+git a tool 
+github a service
+
+git a tool - it is use for source code management
+
+github a service - to host our code
+collab, post, host, status, activity 
+
+git
+
+project timeline 
+
+start|---(v.1)-----(v.2)-----(v.3)-----(v.4)-----(v.5)-------|end
+
+version in git is called commit
+
+files status
+Empty
+Untracked
+Added(tracked)
+Empty
+Modified
