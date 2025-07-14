@@ -15,10 +15,42 @@ start|---(v.1)-----(v.2)-----(v.3)-----(v.4)-----(v.5)-------|end
 version in git is called commit
 
 files status
+
 Empty
 Untracked
 Added(tracked)
 Empty
 Modified
+Deleted(removed)
 
 some change
+
+how to start with a new git directory
+
+git init - will create an empty git directory
+
+git status - will check of any changes that is been carried out into that empty git directory
+
+git add [filename] - will stage a file 
+
+git add . - will stage all files 
+
+git commit -m "[message]" - will create a version (all staged files will be unstaged)
+
+git log - to check the version saved using git commit
+
+git reset --hard [commit_id] - will reset our project version and also remove the changes made before that version
+
+create a remote repo 
+
+copy the http address 
+
+add alia usig 
+
+git remote add origin https_address
+
+get branch_name from git log (head->branch_name)
+
+git push origin branch_name
+
+copy and share the remote repo
