@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+
+    <style>
+        .element {
+            width: 400px;
+            height: 400px;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body style="height: 500vh;">
+
+    <!--position-[ static, relative, absolute, fixed, sticky] -->
+    <!--top, bottom, start(left), end(right) -[0,25,50,100] z-index, z-[0,1,2,3,n1(-1)] -->
+
+    <!-- translate-middle -->
+
+    <div class="element bg-danger my-5 mx-auto position-sticky top-0">
+        <div class="child bg-warning position-absolute start-50 top-50 translate-middle"></div>
+        <div class="child bg-primary position-absolute start-50 top-50 translate-middle z-n1"></div>
+    </div>
+
+</body>
+
+</html>

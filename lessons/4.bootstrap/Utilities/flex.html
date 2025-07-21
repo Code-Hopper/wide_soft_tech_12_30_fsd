@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+
+    <style>
+        .parent {
+            width: 500px;
+            height: 500px;
+            cursor:progress;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- display : flex; -->
+    <!-- flex-direction : flex-[row, column,row-reverse, column-reverse] -->
+    <!-- flex-wrap , flex-[wrap,nowrap] -->
+    <!-- gap, gap-[0,5] -->
+    <!-- justify-content , justify-content-[between, around, evenly, start, end,center] -->
+    <!-- align-items, align-items-[start, end,center, stretch, {flex-start, flex-end, baseline}] -->
+
+    <!-- flex-grow/shrink -->
+
+    <!-- flex-grow-[0/1] -->
+    <!-- flex-shrink-[0/1] -->
+
+    <div class="parent border border-5 border-dark mx-auto my-5 d-flex flex-row gap-2 text-light fw-bold justify-content-center align-items-strech">
+        <div class="child bg-danger flex-grow-1 flex-shrink-1">child 1</div>
+        <div class="child bg-danger flex-grow-1 flex-shrink-1">child 2</div>
+        <!-- <div class="child bg-danger">child 3</div>
+        <div class="child bg-danger">child 4</div>
+        <div class="child bg-danger">child 5</div>
+        <div class="child bg-danger">child 6</div> -->
+    </div>
+
+</body>
+
+</html>
