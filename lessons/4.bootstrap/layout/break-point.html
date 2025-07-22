@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+
+    <style>
+        .child {
+            /* width: 200px; */
+            height: 200px;
+            background-color: var(--bs-blue);
+            color: var(--bs-light);
+            font-weight: 700;
+            font-size: 2rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- sm width <= 576px, md width <= 990px , lg width > 990px  -->
+
+    <!-- class-bp-value -->
+    <!-- spacing, position, display, layout(flex,grid) -->
+
+    <div
+        class="parent border border-dark mx-auto my-5 d-flex gap-5 justify-content-center align-items-stretch align-items-md-center flex-column flex-md-row p-md-5">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+        <div class="child child-4">child-4</div>
+        <div class="child child-5">child-5</div>
+        <div class="child child-6">child-6</div>
+    </div>
+
+</body>
+
+</html>
