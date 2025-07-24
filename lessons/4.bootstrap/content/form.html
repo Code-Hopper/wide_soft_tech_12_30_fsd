@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="container-fluid py-5">
+        <div class="container border border-dark p-5">
+            <form id="form1" class="d-flex gap-4 flex-column needs-validation" novalidate>
+                <div class="d-flex gap-4">
+                    <div>
+                        <input value="" id="nameInput" class="form-control" type="text" placeholder="enter name" required>
+                        <span class="valid-feedback">ok !</span>
+                    </div>
+                    <input class="form-control" type="number" placeholder="enter age">
+                </div>
+                <div>
+                    <textarea class="form-control" name="" placeholder="enter address" id=""></textarea>
+                </div>
+                <div>
+                    <select class="form-select" name="" id="">
+                        <option value="">option 1</option>
+                        <option value="">option 2</option>
+                        <option value="">option 3</option>
+                        <option value="">option 4</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="form-range" type="range" min="0" max="100" step="10">
+                </div>
+                <div>
+                    <label for="chb1" class="form-input-label">agree with terms & conditions : </label>
+                    <input id="chb1" class="form-check-input" type="checkbox">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    document.getElementById("form1").addEventListener("submit", (e) => {
+        alert("form submit triggered !")
+        e.preventDefault()
+
+        let value = document.getElementById("nameInput").value
+
+        if (value) {
+            document.querySelector(".valid-feedback").style.display = "initial"
+        }
+    }) 
+</script>
+
+</html>
