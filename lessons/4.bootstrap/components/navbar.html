@@ -16,28 +16,36 @@
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <span class="navbar-brand fw-bold fs-3">Logo</span>
 
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mobile-menu">
+                <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="mobile-menu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex gap-4">
-                        <input class="form-control" type="search" placeholder="search here...">
-                        <button class="btn btn-outline-success ">search</button>
+                <div class="offcanvas offcanvas-start" data-bs-backdrop="static" id="mobile-menu">
+                    <div class="offcanvas-header bg-danger text-light">
+                        <span>
+                            mobile menu
+                        </span>
+                        <button data-bs-dismiss="offcanvas" class="btn-close"></button>
+                    </div>
+                    <div class="offcanvas-body bg-dark">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex gap-4">
+                            <input class="form-control" type="search" placeholder="search here...">
+                            <button class="btn btn-outline-success ">search</button>
+                        </div>
                     </div>
                 </div>
             </nav>
