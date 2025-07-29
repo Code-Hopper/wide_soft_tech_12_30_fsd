@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container p-5 border border-dark">
+            <button class="btn btn-danger" data-bs-target="#modal1" data-bs-toggle="modal">open modal</button>
+        </div>
+    </div>
+
+    <!-- modal -->
+
+    <div class="modal fade" id="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <span class="text-light">welcome !</span>
+                    <button class="btn-close bg-light" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="placeholder bg-danger col-12 d-flex justify-content-center align-items-center" style="height: 300px;">
+                        <span>this is modal</span>
+                    </span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success">ok</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
