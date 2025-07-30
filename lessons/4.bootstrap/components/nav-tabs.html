@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .nav-tabs .nav-item {
+            flex: 1 1;
+        }
+
+        .nav-tabs .nav-item button {
+            width: 100%;
+            border-radius: 0;
+        }
+
+        .nav-tabs .nav-item button {
+            background-color: black !important;
+        }
+
+        .nav-tabs .nav-item button.active {
+            background-color: var(--bs-primary) !important;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container-fluid">
+        <div class="container border border-dark p-5">
+
+            <div class="row">
+                <div class="col-2">
+                    <!-- nav tabs -->
+                    <ul class="nav-tabs gap-4 nav">
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-content1" class="btn btn-primary active">
+                                Tab 1
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-content2" class="btn btn-primary">
+                                Tab 2
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-content3" class="btn btn-primary">
+                                Tab 3
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-content4" class="btn btn-primary">
+                                Tab 4
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <!-- tab-content -->
+                    <div class="tab-content">
+                        <div class="tab-pane active show fade" id="tab-content1">
+                            <h1>this is tab 1</h1>
+                        </div>
+                        <div class="tab-pane fade" id="tab-content2">
+                            <h1>this is tab 2</h1>
+                        </div>
+                        <div class="tab-pane fade" id="tab-content3">
+                            <h1>this is tab 3</h1>
+                        </div>
+                        <div class="tab-pane fade" id="tab-content4">
+                            <h1>this is tab 4</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

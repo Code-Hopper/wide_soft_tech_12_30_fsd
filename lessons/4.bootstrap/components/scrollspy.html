@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .section {
+            height: 400px;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::before {
+            content: "";
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: red;
+            transition: all 0.5s ease;
+        }
+
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            background-color: transparent !important;
+        }
+    </style>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <div class="container-fluid bg-dark position-sticky top-0">
+        <div class="container">
+            <nav id="navbar" class="navbar navbar-expand navbar-dark bg-dark">
+                <span class="navbar-brand fw-bolder fs-3">logo</span>
+                <ul class="navbar-nav nav-pills ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-1">section 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-2">section 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-3">section 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-4">section 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-5">section 5</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="section bg-danger" id="section-1"></div>
+            <div class="section bg-success" id="section-2"></div>
+            <div class="section bg-dark" id="section-3"></div>
+            <div class="section bg-primary" id="section-4"></div>
+            <div class="section bg-warning" id="section-5"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
