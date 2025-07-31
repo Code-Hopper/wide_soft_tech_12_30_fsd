@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Site</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./vendors/bootstrap-5/css/bootstrap.css">
+
+    <!-- bootstrap js -->
+    <script src="./vendors/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="./vendors/fontawesome/css/all.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./gobal.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        section {
+            height: 50vh;
+        }
+    </style>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <header id="header" class="position-sticky top-0">
+        <div class="container-fluid bg-light shadow">
+            <div class="container">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-light">
+                    <div class="navbar-brand d-flex gap-1">
+                        <div class="bg-dark rounded-circle position-relative" style="width: 40px; height: 40px;">
+                            <i
+                                class="fa-solid fa-code text-accent3 position-absolute start-50 top-50 translate-middle"></i>
+                        </div>
+                        <span class="fw-bolder text-dark fs-4">
+                            Code-Hopper
+                        </span>
+                    </div>
+
+                    <button data-bs-toggle="offcanvas" data-bs-target="#main-menu"
+                        class="navbar-toggler bg-dark text-light">
+                        <span class="navbar-toggler-icon bg-light rounded"></span>
+                        <span class="fw-bolder">Menu</span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-start" id="main-menu">
+                        <div class="d-block d-md-none offcanvas-header bg-dark d-flex justify-content-between">
+                            <span class="text-light">Main Menu</span>
+                            <button class="btn btn-close bg-light" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav ms-auto gap-4 nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#faq">Faq</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#services">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#blog">Blog</a>
+                                </li>
+                                <li>
+                                    <button class="navbar-cta">Hire Me !</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="home"></section>
+    <section id="about"></section>
+    <section id="faq"></section>
+    <section id="services"></section>
+    <section id="portfolio"></section>
+    <section id="blog"></section>
+    <footer id="footer"></footer>
+
+    <div class="relative">
+        <div class="crousel"></div>
+        <div class="text absolute"></div>
+    </div>
+
+</body>
+
+</html>

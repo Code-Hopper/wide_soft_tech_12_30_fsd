@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --darkHex: #131515;
+    --accent1Hex: #2B2C28;
+    --accent2Hex: #339989;
+    --accent3Hex: #7DE2D1;
+    --lightHex: #FFFAFB;
+
+    --darkRGB: 19, 21, 21;
+    --accent1RGB: 43, 44, 40;
+    --accent2RGB: 51, 153, 137;
+    --accent3RGB: 125, 226, 209;
+    --lightRGB: 255, 250, 251;
+}
+
+body {
+    background-color: rgba(var(--lightRGB), 1) !important;
+    font-family: "Space Mono", monospace !important;
+}
+
+.text-dark-custom {
+    color: rgba(var(--darkRGB), 1) !important;
+}
+
+.text-accent1 {
+    color: rgba(var(--accent1RGB), 1) !important;
+}
+
+.text-accent2 {
+    color: rgba(var(--accent2RGB), 1) !important;
+}
+
+.text-accent3 {
+    color: rgba(var(--accent3RGB), 1) !important;
+}
+
+.text-light-custom {
+    color: rgba(var(--lightRGB), 1) !important;
+}
+
+.bg-dark-custom {
+    background-color: rgba(var(--darkRGB), 1) !important;
+}
+
+.bg-accent1 {
+    background-color: rgba(var(--accent1RGB), 1) !important;
+}
+
+.bg-accent2 {
+    background-color: rgba(var(--accent2RGB), 1) !important;
+}
+
+.bg-accent3 {
+    background-color: rgba(var(--accent3RGB), 1) !important;
+}
+
+.bg-light-custom {
+    background-color: rgba(var(--lightRGB), 1) !important;
+}
