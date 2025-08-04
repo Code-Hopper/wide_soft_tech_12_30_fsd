@@ -1,0 +1,15 @@
+javascript is higher level programming language, which is interpreted. Js support both approches (POP, OOP).
+
+scope: web development(ExpressReactNode), mobile development(React Native), desktop development(Electron.js)
+
+client side js / server side js
+
+interpreter(client web browser)
+
+compiled (compiler (troub c++, dev cpp)) / interpreted (interpreter, )
+
+line 1 
+line 2 
+line 3 
+line 4 
+line 5
