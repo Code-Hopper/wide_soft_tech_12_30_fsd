@@ -1,4 +1,4 @@
-javascript is higher level programming language, which is interpreted. Js support both approches (POP, OOP).
+javascript is higher level programming language, which is interpreted. JS support both approches (POP, OOP).
 
 scope: web development(ExpressReactNode), mobile development(React Native), desktop development(Electron.js)
 
@@ -13,3 +13,15 @@ line 2
 line 3 
 line 4 
 line 5
+
+dynamically typed language (JS, Python) / Static typed language(C , C++, JAVA, TypeScritp)
+
+while creating data we will have define the data type
+
+int age 
+string name
+
+let age = 10
+let age = "ten" 
+
+data type will be determined at the runtime

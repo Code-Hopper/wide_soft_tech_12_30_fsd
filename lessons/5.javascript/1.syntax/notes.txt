@@ -1,0 +1,79 @@
+Variable & Data types
+
+scope variable_name assigment oprator(=) data/value(data type);
+
+scope (var public scope,[let, const]protected scope)
+
+var table
+
+let/const table
+
+let - for a variable which will change at a certain point.
+const - for a variable which will not change at any certain point.
+
+let number = 123
+
+let age 
+const age
+
+a variable has 2 parts declrations and initilization
+
+scope name - declrations
+= value/data;
+
+we cannot redeclration of any variable within the same scope
+
+let balance = 1000;
+
+balance = balance + 1000
+
+const account = {
+    number : 37789164627,
+    name : "amey khondekar,
+    phone: 9766696550,
+    address: "nagpur",
+    student: true
+}
+
+account.phone = 8237895726
+
+account = {
+    number : 37789164627,
+    name : "amey khondekar,
+    phone: 8237895726,
+    address: "nagpur"
+}
+
+variable name : 
+3 rules
+
+1. Name has to be unique within the same scope, name can be alpha-numeric but cannot start with a number.
+
+2. No space and no spcial charchters (!@#$%^&*()) within a name , exception which is _
+
+box1234
+
+123box
+
+box_123
+
+data types
+
+primitive 
+
+number(int(4Byte), float (4Byte), double(8Byte), long(16Byte), short(2Byte), byte(1Byte)), string (group of charchter "Abc123" ), boolean (true, false) , [NaN(not a number)["A123" -> NaN], Undefined, Null] error data types
+
+non-primitive
+
+array(collections of element), object(key:value pairs), function/method/module
+
+let age_1 = 22
+let age_2 = 23 
+let name = "amey"
+let student = false
+
+let age_1 = 50
+
+int number = 10000000000000;
+
+let age = 66
