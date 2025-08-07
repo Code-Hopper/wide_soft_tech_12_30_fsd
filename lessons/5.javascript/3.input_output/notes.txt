@@ -1,0 +1,13 @@
+input & output statement methods
+
+output
+
+window.alert(data) | when we want output direclty from browser window 
+document.write(data) | when we want output logged in a html document 
+console.log(data)
+
+input statement
+
+window.confirm() // will always returns a boolean
+window.prompt() // will always returns a string
+form based input

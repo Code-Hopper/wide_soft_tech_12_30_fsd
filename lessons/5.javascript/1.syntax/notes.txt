@@ -28,7 +28,6 @@ let balance = 1000;
 balance = balance + 1000
 
 const account = {
-    number : 37789164627,
     name : "amey khondekar,
     phone: 9766696550,
     address: "nagpur",
@@ -38,7 +37,6 @@ const account = {
 account.phone = 8237895726
 
 account = {
-    number : 37789164627,
     name : "amey khondekar,
     phone: 8237895726,
     address: "nagpur"
