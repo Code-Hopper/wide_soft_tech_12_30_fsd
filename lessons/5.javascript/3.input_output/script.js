@@ -47,15 +47,35 @@
 // to contruct a string
 // concatenation (joining of data with a string/s)
 
-let name = window.prompt("enter name")
-let age = 23
+// let name = window.prompt("enter name")
+// let age = 23
 
-console.log("hello ! " + name + " your age is " + age + " .")
+// console.log("hello ! " + name + " your age is " + age + " .")
 
-// string + string = string
-// string + number = string
-// string + boolean = string
+// // string + string = string
+// // string + number = string
+// // string + boolean = string
 
-// Number + Number = Number
+// // Number + Number = Number
 
-console.log("100" + 200)
+// console.log("100" + 200)
+
+// let data = 10
+
+// console.log(data++) // 10 // 11 // 10
+
+// console.log(data)
+
+// console.log(data--) // 10
+
+// console.log(data) // 9
+
+// console.log(++data) // 11
+
+// console.log(data) // 11
+
+// value++/-- -> post increement/decreeement
+// ++/--value -> pre increement/decreement
+
+// let value = data++
+// console.log(value)

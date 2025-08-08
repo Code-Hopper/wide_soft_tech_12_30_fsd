@@ -1,0 +1,30 @@
+if, if else, if else_if , nasted if, switch case, ternary statement(?)
+
+if(condition){
+    statement
+}
+
+if(condition){
+    statement
+}else{
+    statement
+}
+
+if(condition){
+    if(condition){
+        if(condition){
+            if(condition){
+
+            }
+        }
+    }
+}
+
+
+if(condition){
+
+}else if(condition){
+    
+}else{
+
+}

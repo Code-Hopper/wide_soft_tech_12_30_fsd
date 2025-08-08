@@ -26,6 +26,9 @@ and, or, nor, xor, left shift, right shift
 7.member access oprator
   .
 
+8.increement & decreement oprators
+(post++/--,++/--pre) ++ (+1) , --(-1)
+
 data += 10
 data = data + 10
 
