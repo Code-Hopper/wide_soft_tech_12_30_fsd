@@ -28,3 +28,22 @@ if(condition){
 }else{
 
 }
+
+ternary statement
+
+condition ? true block : false block
+
+switch case
+
+switch(condition){
+    case '1/a' : statements ...
+    break;
+    .
+    .
+    .
+    case 'n' : statements
+    break;
+    default:  statements
+}
+
+menu driven program

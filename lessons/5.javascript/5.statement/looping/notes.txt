@@ -1,0 +1,7 @@
+while, do while, for (gernal purpose looping statements)
+
+while(condition){
+    statement
+    updatation
+}
+
