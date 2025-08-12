@@ -5,3 +5,13 @@ while(condition){
     updatation
 }
 
+do while()
+
+do{
+    statements
+    updatation
+}while(condition)
+
+for(initilize; condition; updatation){
+    statements
+}

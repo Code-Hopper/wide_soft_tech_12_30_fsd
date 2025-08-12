@@ -125,22 +125,93 @@
 // f
 // t-> f
 
-let current_year = 2196
+// let current_year = 2196
 
-let next_leap_year = current_year
+// let next_leap_year = current_year
 
-let willLoopRun = true
+// let willLoopRun = true
 
-while(willLoopRun){
-    next_leap_year++
-    let year = next_leap_year
-    if (year % 100 == 0) {
-        if (year % 400 == 0) {
-            willLoopRun = false
-        }
-    } else if (year % 4 == 0) {
-        willLoopRun = false    
-    }
+// while(willLoopRun){
+//     next_leap_year++
+//     let year = next_leap_year
+//     if (year % 100 == 0) {
+//         if (year % 400 == 0) {
+//             willLoopRun = false
+//         }
+//     } else if (year % 4 == 0) {
+//         willLoopRun = false    
+//     }
+// }
+
+// console.log(next_leap_year)
+
+// reverse of number || to check if the given number is palindrome or not
+
+// 121 = 121 true , 123 = 321 false
+
+let number = org_number = 121
+
+// let rev = 0
+// let d = 0
+// while(number != 0){
+//     d = number % 10
+//     rev = rev * 10 + d
+//     number = parseInt(number/10)
+// }
+
+// console.log(rev)
+
+// if(org_number == rev){
+//     console.log(org_number + " is palindrome !")
+// }else{
+//     console.log(org_number + " is not a palindrome !")
+// }
+
+// rev = rev * 10 + d
+
+// rev = 0 * 10 + 3 // 3
+// rev = 3 * 10 + 2 // 32
+// rev = 32 * 10 + 1 // 321
+
+// let number1 = 100
+
+// while (number1 < 100) {
+//     console.log(number)
+//     number++
+// }
+
+// do {
+//     console.log(number1)
+//     number1++
+// } while (number1 < 100)
+
+// let choice = false
+
+// do {
+//     let year = Number(window.prompt("enter year to check !"))
+
+//     if (year % 100 == 0) {
+//         if (year % 400 == 0) {
+//             console.log(year + " is a leap year !")
+//         } else {
+//             console.log(year + " is not a leap year !")
+//         }
+//     } else if (year % 4 == 0) {
+//         console.log(year + " is a leap year !")
+//     } else {
+//         console.log(year + " is not a leap year !")
+//     }
+
+//     choice = window.confirm("do you wish to continue yes/no")
+
+// } while (choice)
+
+// make similar palindrome as of leap year using do while
+
+// bug fix: the program must not take 0 or NaN as input
+
+for (let number1 = 0; number1 <= 1000; number1++) {
+    if(number1 % 2 != 0) console.log(number1)
 }
 
-console.log(next_leap_year)
+// repeat all examples from while loop using for loop
