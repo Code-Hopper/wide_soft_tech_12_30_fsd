@@ -1,0 +1,31 @@
+to change, format, update, reduce
+
+string is data type
+
+properties
+
+methods (functions)
+
+let name = "Amey Khondekar"
+
+typeof(name) -> string
+
+name.length - 14 (no. of charchter present in the given string !)
+
+"kuch bhi" - string
+'kuch bhi' - string
+`kuch bhi` - string
+
+string.length - (no. of charchter present in the given string !)
+
+change 
+
+1. case(uppercase, lowercase, capitalised)
+
+"some".toUpperCase() -> "SOME"
+
+string
+
+string indexing
+
+0

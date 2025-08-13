@@ -149,7 +149,7 @@
 
 // 121 = 121 true , 123 = 321 false
 
-let number = org_number = 121
+// let number = org_number = 121
 
 // let rev = 0
 // let d = 0
@@ -210,8 +210,33 @@ let number = org_number = 121
 
 // bug fix: the program must not take 0 or NaN as input
 
-for (let number1 = 0; number1 <= 1000; number1++) {
-    if(number1 % 2 != 0) console.log(number1)
-}
+// for (let number1 = 0; number1 <= 1000; number1++) {
+//     if(number1 % 2 != 0) console.log(number1)
+// }
 
 // repeat all examples from while loop using for loop
+
+let choice = false
+
+do {
+    let year = Number(window.prompt("enter year to check !"))
+
+    if (year == 0 || isNaN(year)) {
+        console.log("not a valid data for year. year has to greater than 0 and also should not be NaN !")
+    } else {
+
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                console.log(year + " is a leap year !")
+            } else {
+                console.log(year + " is not a leap year !")
+            }
+        } else if (year % 4 == 0) {
+            console.log(year + " is a leap year !")
+        } else {
+            console.log(year + " is not a leap year !")
+        }
+    }
+    choice = window.confirm("do you wish to continue yes/no")
+
+} while (choice)
