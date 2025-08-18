@@ -1,0 +1,30 @@
+to create a function
+es6
+es6 module / fat arrow function / arrow function
+
+let function_name = (args[optional]) => {
+    function body
+    return statement(optional)
+}
+
+callbacks
+
+using function keyword
+
+function function_name(args[optional]){
+    function body
+    return statement(optional)
+}
+
+genral purpose
+
+to call a function
+
+function_name(data[optional])
+
+types of function
+
+1. no args and no return
+2. args and return
+3. args but no return
+4. no args but return
