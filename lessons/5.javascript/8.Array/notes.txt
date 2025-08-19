@@ -1,0 +1,25 @@
+array is a collection of elements
+
+let data = 123
+let string = "some name"
+
+let array = [element,element,element,element]
+()function {}body []collection
+
+indexed
+
+"amey"
+a - 0
+m - 1
+e - 2
+y - 3(length-1)
+
+access, traverse, search(linear, binary), sort(bubble, selection), filter
+
+array.forEach((element, index)=>{
+    console.log(`element at ${index} is ${element}`)
+})
+
+for(let element of array){
+    console.log(element)
+}

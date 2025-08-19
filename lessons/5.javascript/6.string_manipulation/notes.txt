@@ -29,3 +29,8 @@ string
 string indexing
 
 0
+
+?= -> positive lookup 
+.*[0-9]
+
+(?=.*[0-9])
