@@ -90,8 +90,19 @@ let numbers = [1,2,3,4,5]
 
 // Array.splice(start index, delete count, replacement)
 
-console.log(numbers)
+// console.log(numbers)
 
-numbers.splice(3,0,"hello")
+// numbers.splice(3,0,"hello")
 
-console.log(numbers)
+// console.log(numbers)
+
+// Array.method()
+
+// push, pop, shift, unshift, slice, splice, lastIndexOf, indexOf, includes
+
+// console.log([1,2,3,4,5,5].indexOf(5))
+
+// console.log([1,2,3,4,5,5].lastIndexOf(5))
+
+// console.log([1,2,3].includes("1"))
+
