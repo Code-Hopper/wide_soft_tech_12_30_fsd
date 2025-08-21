@@ -32,7 +32,7 @@ console.log(`${a} ${b} ${c}`)
 
 let number2 = [4, 5, 6, ...numbers]
 
-console.log(number2)
+console.log(number)
 
 let { name, phone } = student1
 
