@@ -1,0 +1,15 @@
+object create relation between data using key: value pair
+
+let object = {
+    key : value,
+    key1 : value1,
+    key2 : value2,
+    key3 : value3,
+    .
+    .
+    .
+    keyFunction: ()=>{console.log()}
+}
+
+object.key
+object.keyFunction()
