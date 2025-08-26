@@ -1,40 +1,47 @@
-let student1 = {
-    name: "amey khondekar",
-    phone: 9766696550,
-    status: true,
-    address: "sakkaradhara nagpur",
-    intrest: ["Java"],
-    contactPerson: {
-        name: "so and so",
-        phone: 8857032120
-    }
-}
+// let student1 = {
+//     name: "amey khondekar",
+//     phone: 9766696550,
+//     status: true,
+//     address: "sakkaradhara nagpur",
+//     intrest: ["Java"],
+//     contactPerson: {
+//         name: "so and so",
+//         phone: 8857032120
+//     }
+// }
 
-student1.name = "Sahil Kumar"
+// student1.name = "Sahil Kumar"
 
-console.log(student1.name)
-console.log(student1.phone)
-console.log(student1.address)
-console.log(student1.intrest)
-console.log(student1.contactPerson)
+// console.log(student1.name)
+// console.log(student1.phone)
+// console.log(student1.address)
+// console.log(student1.intrest)
+// console.log(student1.contactPerson)
 
-for (let key in student1) {
-    console.log(key + " : " + student1[key])
-}
+// for (let key in student1) {
+//     console.log(key + " : " + student1[key])
+// }
 
-// destructure a array/object
+// // destructure a array/object
 
-let numbers = [1, 2, 3]
+// let numbers = [1, 2, 3]
 
-let [a, b, c] = numbers
+// let [a, b, c] = numbers
 
-console.log(`${a} ${b} ${c}`)
+// console.log(`${a} ${b} ${c}`)
 
-let number2 = [4, 5, 6, ...numbers]
+// let number2 = [4, 5, 6, ...numbers]
 
-console.log(number)
+// console.log(number)
 
-let { name, phone } = student1
+// let { name, phone } = student1
 
-console.log(name)
-console.log(phone)
+// console.log(name)
+// console.log(phone)
+
+// let number1 = [1,2,3]
+// let number2 = [4,5,6]
+
+// let numbers = [...number1,...number2]
+
+// [1,2,3,4,5,6]
