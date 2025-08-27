@@ -44,3 +44,16 @@ try{
 }catch(e){
     console.log("got an exception while dividing : " , e)
 }
+
+// promise - pending(hold)
+//         - resolve(move forward) - promise - pending(hold)
+//         - reject(try catch)               - resolve(move forward) - 
+//                                           - reject(try catch)
+
+// task 1 | 2s 
+//         task 2 | 5s
+//                 task 3 | 3s
+
+// setTimeout(()=>{},[]); setInterval(()=>{},[]) // clearInterval()
+
+promise
