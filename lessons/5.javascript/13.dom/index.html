@@ -7,15 +7,29 @@
     <title>Document</title>
 
     <style>
-        .size{
+        .size {
             width: 500px;
             height: 500px;
         }
-        .color{
+
+        .color {
             background-color: red;
         }
-        .border{
+
+        .color2 {
+            background-color: blue;
+        }
+
+        .border {
             border: 10px solid black;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
         }
     </style>
 
@@ -23,9 +37,18 @@
 
 <body>
 
+    <table id="table1" border="1">
+    </table>
+
+    <button id="btn1">
+        <b>click to <u>count</u></b>
+    </button>
+
     <div id="e2" class="size color"></div>
 
-    <button id="btn1">add border class to above div</button>
+    <div id="e3" class="size color2"></div>
+
+    <!-- <button disabled id="btn1">add border class to above div</button> -->
 
     <h1 id="first">hello world !</h1>
     <div class="secondary">
@@ -34,10 +57,11 @@
     </div>
 
     <div class="secondary">
-        <img class="primary" src="https://picsum.photos/id/237/200/300" width="" height="" alt="">
+        <img id="target-img" class="primary" src="https://picsum.photos/id/237/200/300" width="" height="" alt="">
+        <button id="change_img_btn">change image</button>
     </div>
 
-    <input id="input1" type="text" value="hello" placeholder="write hello here" required disabled name="name1" >
+    <input id="input1" type="text" value="hello" placeholder="write hello here" required disabled name="name1">
 
     <table>
         <tr></tr>
@@ -49,8 +73,7 @@
     <h1 id="something">this is h1 element 5</h1>
     <h1>this is h1 element 6</h1>
 
-
 </body>
-<script src="./script2.js"></script>
+<script src="./script3.js"></script>
 
 </html>

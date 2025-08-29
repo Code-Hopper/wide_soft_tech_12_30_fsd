@@ -42,19 +42,32 @@
 
 // // console.log(e2.classList)
 
+// let e2 = document.getElementById("e2")
 
-let e2 = document.getElementById("e2")
+// let orignalClasses = 'size color'
 
-function addBorder() {
-    // let borderClassExist = e2.classList.includes("border")
-    console.log(e2.classList[0])
-    if (borderClassExist) {
-        e2.classList = `${e2.classList}`
-    }else{
-        e2.classList = `${e2.classList} border`
-    }
-}
+// function addBorder() {
+//     let classes = e2.classList.value
+//     let borderClassExist = classes.includes("border")
+//     console.log(borderClassExist)
+//     if (borderClassExist) {
+//         e2.classList = `${orignalClasses}`
+//     }else{
+//         e2.classList = `${e2.classList} border`
+//     }
+// }
 
-let button = document.querySelector("#btn1")
+// let button = document.querySelector("#btn1")
 
-button.addEventListener("click", addBorder)
+// button.addEventListener("click", addBorder)
+
+// console.log(document.getElementById("e2").classList.value.includes("border"))
+
+// let targetImage = document.querySelector("#target-img")
+
+// let increment = 237
+
+// document.getElementById("change_img_btn").addEventListener('click', () => {
+//     increment++
+//     targetImage.setAttribute("src", `https://picsum.photos/id/${increment}/200/300`)
+// })
