@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .first {
+            width: 300px;
+            height: 0px;
+            background-color: red;
+            /* transform: scale(1,0); */
+            visibility: hidden;
+            transition: all 2s ease;
+        }
+
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            display: none;
+        }
+
+        #container3 {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            transition: all 5s ease;
+        }
+
+        .colorContainer3 {
+            background-color: yellowgreen;
+        }
+
+        .show {
+            /* transform: scale(1,1); */
+            visibility: visible;
+            height: 300px;
+        }
+
+        .first  *{
+            visibility: inherit;
+            transition: all 2s ease;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <h1 id="e1" data-bs-toggle="collapse">this is some heading element</h1>
+    <h2 id="e2" data-element="2">this is some heading element</h2>
+    <h3 id="e3" data-element="3">this is some heading element</h3> -->
+
+    <button id="btn1" data-target-element="#container1" data-toggle-class="show" onclick="toggleClass(event)">click
+        here</button>
+
+    <div class="first" id="container1" data-add="show">
+        <h1>this is some container 1 element</h1>
+    </div>
+
+    <button data-target-element="#container2" data-toggle-class="show" onclick="toggleClass(event)">click here
+        1</button>
+
+    <div id="container2" class="second">
+        <h1>this is some second container</h1>
+    </div>
+
+    <div id="container3" class="" data-target-element="#container3" data-toggle-class="colorContainer3"
+        onclick="toggleClass(event)">
+        this is some container
+    </div>
+
+</body>
+<script src="./dataset.js"></script>
+
+</html>
