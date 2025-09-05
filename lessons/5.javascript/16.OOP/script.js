@@ -51,6 +51,12 @@ class cars {
     }
 }
 
+class switf extends cars{
+    safetyRatings(){
+        return 0
+    }
+}
+
 let swift = new cars("swift vxi",4,5,true,false,false)
 let swift1 = new cars("dizre vxi",4,5,true,false,false)
 let swift2 = new cars()
