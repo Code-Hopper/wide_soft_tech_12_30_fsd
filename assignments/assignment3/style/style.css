@@ -1,0 +1,60 @@
+.main-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.main-container>.content>.container {
+    height: auto;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.slider {
+    height: 100%;
+}
+
+.slider-options {
+    list-style: none;
+}
+
+.slider-options .option {
+    font-weight: bold;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.slider-options .option:hover {
+    background-color: var(--bs-warning);
+}
+
+.keeper-body {
+    padding: 2rem;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+}
+
+.add-notes-pop-up {
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .75);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.add-notes-pop-up>.add-notes-form {
+    z-index: 99;
+    width: 500px;
+    height: 500px;
+    background-color: var(--bs-light);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

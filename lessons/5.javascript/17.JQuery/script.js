@@ -178,3 +178,22 @@
 // let randomNumber2 = genRateRandomNumber(6)
 
 // "img-${number}.png/jgp"
+
+
+// document.querySelector("h1").innerText = "<u>some text</u>"
+// document.querySelector("h1").textContent = "<u>some text</u>"
+
+// console.log(document.querySelector("h1").innerText)
+
+// to learn textContent
+
+// localStorage.getItem()
+// localStorage.setItem()
+// localStorage.removeItem()
+
+let data = 123
+
+localStorage.setItem("data","something")
+// localStorage.removeItem("data")
+let result = localStorage.getItem("data")
+console.log(result)

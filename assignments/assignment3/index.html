@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note keeper</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- bootstarp css -->
+    <link rel="stylesheet" href="./vendors/bootstrap-5/css/bootstrap.css">
+    <!-- bootstarp js -->
+    <script src="./vendors/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./vendors/fontawesome/css/all.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <div class="header text-light d-flex gap-5 align-items-center justify-content-between p-2">
+                    <div class="logo">
+                        <button class="btn btn-light">
+                            <span class="fa-solid fa-bars"></span>
+                        </button>
+                        <span class="fw-bolder">Note Keeper</span>
+                    </div>
+                    <div class="search-bar">
+                        <input class="form-control" type="search" name="" placeholder="enter title to search" id="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content container-fluid">
+            <div class="container">
+                <div class="slider">
+                    <ul class="slider-options">
+                        <li class="option"><span class="fa-solid fa-caret-right"></span> Labels</li>
+                        <li class="option"><span class="fa-solid fa-caret-right"></span> Edit Notes</li>
+                        <li class="option"><span class="fa-solid fa-caret-right"></span> Options</li>
+                    </ul>
+                </div>
+                <div class="keeper-body">
+                    <div class="action">
+                        <button id="add-notes-button" class="btn btn-primary">Add Notes</button>
+                        <div class="add-notes-pop-up">
+                            <div class="add-notes-form">
+                                <button
+                                    class="position-absolute start-100 top-0 translate-middle close btn btn-danger rounded-circle">
+                                    <span class="fa-solid fa-times"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./scripts/script.js"></script>
+
+</html>
