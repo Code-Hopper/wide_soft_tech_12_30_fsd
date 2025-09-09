@@ -45,10 +45,19 @@
                         <button id="add-notes-button" class="btn btn-primary">Add Notes</button>
                         <div class="add-notes-pop-up">
                             <div class="add-notes-form">
-                                <button
+                                <button id="close-pop-up"
                                     class="position-absolute start-100 top-0 translate-middle close btn btn-danger rounded-circle">
                                     <span class="fa-solid fa-times"></span>
                                 </button>
+                                <div class="content">
+                                    <form id="task-form">
+                                        <input class="title" placeholder="Task Title" type="text">
+                                        <textarea class="description" placeholder="Task Description" name="" id=""
+                                            cols="" rows="5"></textarea>
+                                        <button style="visibility: hidden;" id="formSubmitButton"
+                                            type="submit">submit</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
