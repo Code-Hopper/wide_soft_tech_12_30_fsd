@@ -18,49 +18,38 @@ closeButton.addEventListener('click', () => {
     targetElement.classList.remove("active")
 })
 
-// {
-//     titile: "some title",
-//         description : "some description",
-//             timeStamp : "T:12:50:00 D: 09/09/2025"
-// }
-
 addNotesFormContainer.addEventListener("mouseleave", () => {
     document.getElementById("formSubmitButton").click()
 })
 
-let taskObject = {
-    title: "",
-    description: "",
-    timeStamp: ""
-}
 
 taskForm.addEventListener('submit', (event) => {
     event.preventDefault()
     try {
-
         if (!event.target["title"].value || !event.target["description"].value) {
             throw ("empty fields !")
         }
+        tasks.push({
+            title: event.target["title"].value,
+            description: event.target["description"].value,
+            timeStamp: `T: ${new Date().toLocaleTimeString()} D: ${new Date().toLocaleDateString()}`
+        })
 
-        taskObject.title = event.target["title"].value
-        taskObject.description = event.target["description"].value
-        taskObject.timeStamp = `T: ${new Date().toLocaleTimeString()} D: ${new Date().toLocaleDateString()}`
-        console.log(taskObject)
-        tasks.push(taskObject)
         event.target["title"].value = ""
         event.target["description"].value = ""
+
         closeButton.click()
+
         displayTask()
+
     } catch (err) {
         console.log("please added task data before submitting ! : ", err)
     }
 })
 
 function displayTask() {
-
     document.querySelector('.tasks-container').innerHTML = ""
-
-    tasks.forEach((task) => {
+    tasks.forEach((task, index) => {
         let singleTask = document.createElement("div")
         singleTask.classList.value = "task border p-4"
         singleTask.innerHTML = `
@@ -69,7 +58,22 @@ function displayTask() {
                                 ${task.description}
                             </p>
                             <span class="timeStamp">${task.timeStamp}</span>
+                            <button onClick='deleteTask(${index})'>delete</button>
+                            <button onClick='editTask(${index})'>Edit</button>
     `
         document.querySelector('.tasks-container').appendChild(singleTask)
     })
+}
+function deleteTask(deleteIndex) {
+    tasks = tasks.filter((task, index) => { return index != deleteIndex })
+    displayTask()
+}
+
+function editTask(editIndex) {
+    // open pop up
+    targetElement.classList.add("active")
+    // access the data for selected task
+    console.log(tasks[editIndex].title)
+    console.log(tasks[editIndex].description)
+    // put selected data into input fields
 }
