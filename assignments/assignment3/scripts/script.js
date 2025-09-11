@@ -8,6 +8,10 @@ let closeButton = document.querySelector('#close-pop-up')
 
 let taskForm = document.querySelector("#task-form")
 
+let isEdit = false
+
+let TaskEditIndex = null
+
 let addNotesFormContainer = document.querySelector(".add-notes-form")
 
 add_notes_button.addEventListener('click', (event) => {
@@ -26,22 +30,23 @@ addNotesFormContainer.addEventListener("mouseleave", () => {
 taskForm.addEventListener('submit', (event) => {
     event.preventDefault()
     try {
-        if (!event.target["title"].value || !event.target["description"].value) {
-            throw ("empty fields !")
+        if (isEdit && TaskEditIndex != null) {
+            tasks[TaskEditIndex].title = event.target["title"].value
+            tasks[TaskEditIndex].description = event.target["description"].value
+        } else {
+            if (!event.target["title"].value || !event.target["description"].value) {
+                throw ("empty fields !")
+            }
+            tasks.push({
+                title: event.target["title"].value,
+                description: event.target["description"].value,
+                timeStamp: `T: ${new Date().toLocaleTimeString()} D: ${new Date().toLocaleDateString()}`
+            })
         }
-        tasks.push({
-            title: event.target["title"].value,
-            description: event.target["description"].value,
-            timeStamp: `T: ${new Date().toLocaleTimeString()} D: ${new Date().toLocaleDateString()}`
-        })
-
         event.target["title"].value = ""
         event.target["description"].value = ""
-
         closeButton.click()
-
         displayTask()
-
     } catch (err) {
         console.log("please added task data before submitting ! : ", err)
     }
@@ -65,8 +70,13 @@ function displayTask() {
     })
 }
 function deleteTask(deleteIndex) {
-    tasks = tasks.filter((task, index) => { return index != deleteIndex })
-    displayTask()
+    let confirmDelete = window.confirm(`do you really want to delete ${deleteIndex} element ?`)
+    if (confirmDelete) {
+        tasks = tasks.filter((task, index) => { return index != deleteIndex })
+        displayTask()
+    } else {
+        alert("delete cancelled !")
+    }
 }
 
 function editTask(editIndex) {
@@ -76,4 +86,9 @@ function editTask(editIndex) {
     console.log(tasks[editIndex].title)
     console.log(tasks[editIndex].description)
     // put selected data into input fields
+    taskForm["title"].value = tasks[editIndex].title
+    taskForm["description"].value = tasks[editIndex].description
+    // edit variable set
+    isEdit = true
+    TaskEditIndex = editIndex
 }
