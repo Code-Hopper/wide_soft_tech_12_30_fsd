@@ -1,4 +1,4 @@
-let tasks = []
+let tasks = JSON.parse(localStorage.getItem("data")) || []
 
 let add_notes_button = document.querySelector("#add-notes-button")
 
@@ -49,7 +49,7 @@ taskForm.addEventListener('submit', (event) => {
         event.target["description"].value = ""
         closeButton.click()
         displayTask(tasks)
-        SaveDataIntoLocalStorage(tasks.toString())
+        SaveDataIntoLocalStorage(tasks)
     } catch (err) {
         console.log("please added task data before submitting ! : ", err)
     }
@@ -83,6 +83,7 @@ function deleteTask(deleteIndex) {
     let confirmDelete = window.confirm(`do you really want to delete ${deleteIndex} element ?`)
     if (confirmDelete) {
         tasks = tasks.filter((task, index) => { return index != deleteIndex })
+        SaveDataIntoLocalStorage(tasks)
         displayTask(tasks)
     } else {
         alert("delete cancelled !")
@@ -117,5 +118,7 @@ searchBar.addEventListener("change", (event) => {
 })
 
 function SaveDataIntoLocalStorage(data) {
-    localStorage.setItem("data", data)
+    localStorage.setItem("data", JSON.stringify(data))
 }
+
+displayTask(tasks)
