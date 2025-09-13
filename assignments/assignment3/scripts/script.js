@@ -47,6 +47,7 @@ taskForm.addEventListener('submit', (event) => {
         }
         event.target["title"].value = ""
         event.target["description"].value = ""
+        event.target["category"].value = ""
         closeButton.click()
         displayTask(tasks)
         SaveDataIntoLocalStorage(tasks)
@@ -66,15 +67,19 @@ function displayTask(arrayToBeDisplayed) {
     document.querySelector('.tasks-container').innerHTML = ""
     arrayToBeDisplayed.forEach((task, index) => {
         let singleTask = document.createElement("div")
-        singleTask.classList.value = "task border p-4"
+        singleTask.classList.add("task-object")
         singleTask.innerHTML = `
                             <h4 class="title">${task.title}</h4>
                             <p class="description">
                                 ${task.description}
                             </p>
-                            <span class="timeStamp">${task.timeStamp}</span>
-                            <button onClick='deleteTask(${index})'>delete</button>
-                            <button onClick='editTask(${index})'>Edit</button>
+                            <div class="d-flex gap-3 justify-content-between flex-column">
+                                <span class="timeStamp">${task.timeStamp}</span>
+                                <div class="d-flex gap-3">
+                                    <button class="flex-grow-1 btn btn-danger" onClick='deleteTask(${index})'>delete</button>
+                                    <button class="flex-grow-1 btn btn-primary" onClick='editTask(${index})'>Edit</button>
+                                </div>
+                            </div>
     `
         document.querySelector('.tasks-container').appendChild(singleTask)
     })

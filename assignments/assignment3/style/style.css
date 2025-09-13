@@ -77,3 +77,16 @@
 .content #task-form .description {
     border: none;
 }
+
+.tasks-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+.task-object {
+    /* background-color: red; */
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,.1);
+}

@@ -70,18 +70,31 @@ let tableData = [
 ]
 
 
-let table = document.getElementById("table1")
+// let table = document.getElementById("table1")
 
-let tr = document.createElement("tr")
-let td1 = document.createElement("td")
-let td2 = document.createElement("td")
+// let tr = document.createElement("tr")
+// let td1 = document.createElement("td")
+// let td2 = document.createElement("td")
 
-td1.innerText = tableData[0].name
-td2.innerText = tableData[0].phone
+// td1.innerText = tableData[0].name
+// td2.innerText = tableData[0].phone
 
-tr.appendChild(td1)
-tr.appendChild(td2)
+// tr.appendChild(td1)
+// tr.appendChild(td2)
 
-table.appendChild(tr)
+// table.appendChild(tr)
 
 // table.append(tr)
+
+let table = document.querySelector("table")
+
+let row1 = document.createElement("tr")
+
+let col1 = document.createElement("td")
+col1 = "column 1"
+
+row1.appendChild(col1)
+
+table.appendChild(row1)
+
+let target = document.getElementById("target").dataset.someValue

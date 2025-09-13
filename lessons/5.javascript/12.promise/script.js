@@ -10,7 +10,8 @@ function getData(name) {
                         data: {
                             name: "amey khonekar",
                             phone: 9766696550
-                        }
+                        },
+                        more: true
                     }
                 )
             }, [2000])
