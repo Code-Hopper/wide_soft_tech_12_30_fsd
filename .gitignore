@@ -5,3 +5,7 @@ rough
 
 /lessons/6.Node_Express_Mongodb/server2/node_modules
 /lessons/6.Node_Express_Mongodb/server2/package-lock.json
+
+/lessons/6.Node_Express_Mongodb/server3/node_modules
+/lessons/6.Node_Express_Mongodb/server3/package-lock.json
+/lessons/6.Node_Express_Mongodb/server3/config.env
