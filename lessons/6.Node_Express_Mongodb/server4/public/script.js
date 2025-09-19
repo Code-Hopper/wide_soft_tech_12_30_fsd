@@ -1,2 +1,2 @@
 console.log(document)
-alert("hello !")
+// alert("hello !")

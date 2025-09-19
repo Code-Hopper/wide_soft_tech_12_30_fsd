@@ -2,4 +2,29 @@
 
     <h1>this is a index.ejs file</h1>
 
+    <h1>
+        <%= data %>
+        
+        <% for(let i=0 ; i < 5 ; i++) { %>
+            <%= data2 %>
+        <% } %>
+    </h1>
+
+    <table border="1">
+            <% for(let index = 0 ; index < 5 ; index++) { %>
+                <tr>
+                    <td><%= data3[index].name %></td>
+                    <td><%= data3[index].phone %></td>
+                </tr>
+            <%}%>
+    </table>
+
+    <form action="/submit-form" method="POST">
+        <input type="text" placeholder="enter your name" name="name" required>
+        <input type="number" placeholder="enter your age" name="age" required>
+        <button type="submit">submit</button>
+    </form>
+
+    <%= kuch %>
+
 <%- include("./partials/footer.ejs") %>
