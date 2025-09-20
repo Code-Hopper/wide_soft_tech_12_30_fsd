@@ -38,7 +38,7 @@ app.listen(port, () => {
 // API
 
 // Application1 -----> Application2
-//               API
+//                API
 // Application1 <----- Application2
 
 // API Client(Server, UI, etc...)
