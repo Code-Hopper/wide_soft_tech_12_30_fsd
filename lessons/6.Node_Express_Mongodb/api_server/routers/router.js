@@ -1,10 +1,14 @@
 import express from "express"
-import { getHome, getSomewhere } from "../controllers/controller.js"
+import { getDetails, getFilterData } from "../controllers/controller.js"
 
 let router = express.Router()
 
-router.get("/", getHome)
+router.get("/", (req, res) => {
+    res.redirect('/get-details')
+})
 
-router.get("/somewhere/:name/:phone", getSomewhere)
+router.get("/get-details", getDetails)
+
+router.get("/filter", getFilterData)
 
 export { router }

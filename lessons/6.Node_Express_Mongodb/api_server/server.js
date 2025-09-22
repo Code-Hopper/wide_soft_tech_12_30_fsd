@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static("public"))
 
-app.use("/api", router)
+app.use("/languages/api", router)
 
 app.use((req, res) => {
     console.log("someone is trying to access a 404 route !")
