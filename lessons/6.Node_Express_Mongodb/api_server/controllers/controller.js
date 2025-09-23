@@ -6,10 +6,25 @@ const getDetails = (req, res) => {
         routes: [
             {
                 method: "GET",
+                address: "localhost/languages/api/random/language",
+                expectedResult: "Array"
+            },
+            {
+                method: "GET",
+                address: "localhost/languages/api/all",
+                expectedResult: "Array"
+            },
+            {
+                method: "GET",
+                address: "localhost/languages/api/get-language/{:id}",
+                expectedResult: "object/error"
+            },
+            {
+                method: "GET",
                 address: "localhost/languages/api/filter?scope=value",
                 expectedResult: "Array/Null",
                 queryOptions: [
-                    "scope", "duration[in weeks]", "diffuculties"
+                    "scope", "duration[in weeks]", "difficulties[Easy,Medium,Hard]"
                 ],
                 possibleScopes: [
                     "Web development", "Full-stack", "Mobile apps", "AI", "ML", "Data science", "Scripting", "Enterprise apps", "Android", "Backend systems", "System programming", "Embedded systems", "OS", "Game dev", "High-performance apps",
@@ -49,6 +64,11 @@ const getDetails = (req, res) => {
                     "Beginner education",
                     "Kids programming"
                 ]
+            }, 
+            {
+                method: "POST",
+                address: "localhost/languages/api/add-language",
+                expectedResult: "can accept Json and Form Data"
             }
         ]
     })
@@ -57,11 +77,11 @@ const getDetails = (req, res) => {
 
 const getFilterData = (req, res) => {
     try {
-        let { scope, duration } = req.query
+        let { scope, duration, difficulties } = req.query
 
         let userScope = scope
 
-        if (!scope && !duration) throw ("filter is invalid !")
+        if (!scope && !duration && !difficulties) throw ("filter is invalid !")
 
         let resultArray = languages
 
@@ -81,6 +101,15 @@ const getFilterData = (req, res) => {
             })
             queryType += "/duration"
         }
+
+        if (difficulties) {
+            resultArray = resultArray.filter((language) => {
+                // check for type casting
+                return language.difficulties.toLowerCase() == difficulties.toLowerCase().trim()
+            })
+            queryType += "/difficulties"
+        }
+
         if (resultArray.length == 0) throw (`unable to find languages based on ${queryType}`)
 
         res.status(200).json({ message: `got result based on ${queryType}`, resultCount: resultArray.length, results: resultArray })
@@ -91,4 +120,62 @@ const getFilterData = (req, res) => {
     }
 }
 
-export { getDetails, getFilterData }
+const getRandomLanguage = (req, res) => {
+    let randomNumber = Math.floor((Math.random() * 50) + 1)
+    let result = languages.filter((language) => {
+        return language.id == randomNumber
+    })
+    res.status(200).json({ message: "random language you were requesting is ", result })
+}
+
+const getAllLanaguages = (req, res) => {
+    res.status(200).json({ message: 'all the languages within the dataset are.', languages })
+}
+
+const getLanguageBasedOnId = (req, res) => {
+    try {
+        let { id } = req.params
+
+        if (!id) throw ("invalid id !")
+
+        let result = languages.filter((language) => {
+            return language.id == id
+        })
+
+        if (result.length == 0) throw (`unable to find language.id ${id}`)
+
+        res.status(200).json({ message: `we have on id ${id} !`, result: result[0] })
+
+    } catch (err) {
+        console.log(err)
+        res.status(400).json({ message: `unable to get data based on id !`, err })
+    }
+}
+
+const postAddLanaguage = (req, res) => {
+    try {
+
+        let { title, scope, duration, difficulties } = req.body
+
+        // scope has to be ann array
+        if (!title || !scope || !duration || !difficulties) throw ("invalid/incomplete data !")
+
+        if (!Array.isArray(scope)) throw ("invalid data scope has to be an array !")
+
+        let newLanguage = {
+            title, scope, duration, difficulties
+        }
+
+        newLanguage.id = languages.length + 1
+
+        languages.push(newLanguage)
+
+        res.status(202).json({ message: `new language ${newLanguage.title} addedd successfully !` })
+
+    } catch (err) {
+        console.log('err while adding a new language !', err)
+        res.status(400).json({ message: `unable to new language !`, err })
+    }
+}
+
+export { getDetails, getFilterData, getRandomLanguage, getAllLanaguages, getLanguageBasedOnId, postAddLanaguage }
