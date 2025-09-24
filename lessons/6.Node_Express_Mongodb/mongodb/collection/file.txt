@@ -1,0 +1,44 @@
+Create(database, collection, document)
+Read(database, collection, document)
+Update(collection, document)
+Delete(database, collection, document)
+
+{
+    key1 : "1"
+}
+
+{
+    key1 : "1",
+    key2 : "2",
+    key3 : "3"
+}
+{
+    key1 : "1"
+}
+
+Ecommerce, IoT, Horizontal database
+
+CLI, API, GUI
+
+creating a database
+show dbs
+use database_name
+
+use command will switch into a database(if exist) will create a new database 
+
+to create a collection syntax is db.createCollection("collection-names")
+
+the document within the collection is of BSON(Binary JSON) format
+
+db.collection.insertOne({})
+db.collection.insertMany([of object])
+
+db.students.insertMany([ 
+    {_id:4, name: "studnet4"},
+    {_id:5, name: "studnet5"},
+    {_id:6, name: "studnet6"},
+    {_id:7, name: "studnet7"},
+    {_id:8, name: "studnet8"}
+])
+
+all the document will have a unique _id

@@ -9,3 +9,5 @@ router.get("/about", getAbout)
 router.post("/submit-form", postSubmitForm)
 
 export default router 
+
+// https://www.mongodb.com/resources/basics/databases/nosql-explained/nosql-vs-sql
