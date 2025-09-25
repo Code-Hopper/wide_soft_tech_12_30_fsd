@@ -1,0 +1,66 @@
+read
+
+db.collection.find(query) -> "array/empty array"
+db.collection.findOne(query) -> "object/null
+
+db.collection.find({}) -> no filter(return all the documents availbe within the collection)
+
+oprators
+
+db.collection.find({ _id : value }) - [object] / []
+
+db.collection.find({ _id : value , name : certain_name }) - [object] / []
+
+condition && condition -> [object]/[]
+
+oprators
+
+$lt - less than
+$gt - greater than
+$lte - less than equals to
+$gte -  greater than equals to
+$ne - not equals to
+$eq - equals to
+$in - in[range]
+$nin - not in[range]
+
+{ _id:{$lte : 10}}
+
+db.techs.find({ _id : {$in : [1,5,10]}})
+will return objects with id [1,5,10]
+db.techs.find({ _id : {$nin : [1,5,10]}})
+will return all objects except the one with id [1,5,10]
+
+db.techs.find(
+    { 
+        _id : {
+            $in : [1,5,10]
+        }
+    }
+)
+
+logical oprator
+
+$and
+$or
+$nor
+$not
+
+db.techs.find({ $or : [ {_id : { $lte : 10} } , { title : "MATLAB"} ] })
+
+
+db.techs.find({ $and : [ {_id : { $lte : 30} } , { title : "MATLAB"} ] })
+
+db.techs.find({ $nor : [ {_id : { $lte : 30} } , { title : "MATLAB"} , { title : "Smalltalk" } ] })
+
+20 - 30
+
+db.techs.find(
+    { $and : [ {_id : {$gte : 20} } , {_id : {$lte: 30}} ] }
+)
+
+db.techs.find({ _id : { $not : {$gt : 15 } } })
+
+db.collection.find/findOne({query},{projection})
+
+db.techs.find({ _id : { $not : {$gt : 15 } } } , {title : true, scope: true})
