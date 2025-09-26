@@ -64,3 +64,36 @@ db.techs.find({ _id : { $not : {$gt : 15 } } })
 db.collection.find/findOne({query},{projection})
 
 db.techs.find({ _id : { $not : {$gt : 15 } } } , {title : true, scope: true})
+
+Array oprators (Read)
+$in:['Web development', 'Full-stack', 'Mobile apps'] -> findOne -> object/null, find -> Array/[]
+$nin
+
+db.techs.find({scope : "Web development"})
+
+db.techs.find({scope:{$in:["Web development","Mobile development"]}})
+
+db.techs.find({scope:{$nin:["Web development","Mobile development"]}})
+
+db.techs.find({scope:{$all :["Web development","Mobile apps"]}})
+
+db.techs.find({scope : {$size : 3}})
+
+db.techs.find()
+
+{
+    name: "Student name"
+    phone: "975557884",
+    city : "nagpur",
+    subjects: [
+        { title : "Maths", score : 50 },
+        { title : "Science", score : 80 },
+        { title : "English", score : 70 },
+    ]
+}
+
+db.students.find({ subjects : { $elemMatch : { title : "Maths" , score : { $gt : 50 } } } })
+
+db.collection.updateOne/Many({query},{updation})
+
+$set/$unset
