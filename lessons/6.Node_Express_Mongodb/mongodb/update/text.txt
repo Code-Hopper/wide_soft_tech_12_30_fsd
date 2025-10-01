@@ -1,0 +1,7 @@
+update
+
+db.collection.updateOne/Many({search},{update})
+$set - will modify/create a new field within a document
+$unset
+
+study array update oprators

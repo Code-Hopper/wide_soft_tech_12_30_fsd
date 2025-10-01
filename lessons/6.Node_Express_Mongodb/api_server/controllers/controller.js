@@ -1,4 +1,18 @@
-import { languages } from "../data/Languages.js"
+// import { languages } from "../data/Languages.js"
+import { techModel } from "../models/techSchema.js"
+
+let languages = []
+
+async function fetchInitialLanguages() {
+    try {
+        languages = await techModel.find({})
+    } catch (err) {
+        console.log(err)
+        languages = []
+    }
+}
+
+fetchInitialLanguages()
 
 const getDetails = (req, res) => {
     res.status(200).json({
@@ -64,7 +78,7 @@ const getDetails = (req, res) => {
                     "Beginner education",
                     "Kids programming"
                 ]
-            }, 
+            },
             {
                 method: "POST",
                 address: "localhost/languages/api/add-language",
@@ -128,8 +142,21 @@ const getRandomLanguage = (req, res) => {
     res.status(200).json({ message: "random language you were requesting is ", result })
 }
 
-const getAllLanaguages = (req, res) => {
-    res.status(200).json({ message: 'all the languages within the dataset are.', languages })
+const getAllLanaguages = async (req, res) => {
+    try {
+
+        // fetch all languages
+
+        let dataBaselanguages = await techModel.find({})
+
+        if (dataBaselanguages.length == 0) throw ("unable to fetch all languages at this moment !")
+
+        res.status(200).json({ message: 'all the languages within the dataset are.', dataBaselanguages })
+
+    } catch (err) {
+        console.log("error while fetching languages : ", err)
+        res.status(500).json({ message: "unable to find languages", err })
+    }
 }
 
 const getLanguageBasedOnId = (req, res) => {
@@ -152,7 +179,7 @@ const getLanguageBasedOnId = (req, res) => {
     }
 }
 
-const postAddLanaguage = (req, res) => {
+const postAddLanaguage = async (req, res) => {
     try {
 
         let { title, scope, duration, difficulties } = req.body
@@ -162,20 +189,20 @@ const postAddLanaguage = (req, res) => {
 
         if (!Array.isArray(scope)) throw ("invalid data scope has to be an array !")
 
-        let newLanguage = {
-            title, scope, duration, difficulties
-        }
+        let newTech = new techModel({ title, scope, duration, difficulties })
 
-        newLanguage.id = languages.length + 1
+        await newTech.save()
 
-        languages.push(newLanguage)
+        res.status(202).json({ message: `new language ${title} addedd successfully !` })
 
-        res.status(202).json({ message: `new language ${newLanguage.title} addedd successfully !` })
+        fetchInitialLanguages()
 
     } catch (err) {
         console.log('err while adding a new language !', err)
         res.status(400).json({ message: `unable to new language !`, err })
     }
 }
+
+// insert, update, delete
 
 export { getDetails, getFilterData, getRandomLanguage, getAllLanaguages, getLanguageBasedOnId, postAddLanaguage }

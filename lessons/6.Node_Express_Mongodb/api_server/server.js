@@ -1,6 +1,8 @@
 import express from "express"
 import dotenv from "dotenv"
+import "./database/conn.js"
 import { router } from "./routers/router.js"
+import mongoose from "mongoose"
 
 dotenv.config({ path: "./config.env" })
 

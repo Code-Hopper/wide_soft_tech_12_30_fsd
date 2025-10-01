@@ -1,0 +1,4 @@
+db.collection.deleteOne({read})
+db.collection.deleteMany({read})
+
+db.collection.drop() - to delete collections
