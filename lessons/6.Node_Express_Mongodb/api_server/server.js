@@ -31,3 +31,7 @@ app.use((req, res) => {
 app.listen(port, () => {
     console.log(`server is running on port ${port} !`)
 })
+
+// [GET/POST/PUT/PATCH/DELET ] /endpoint/
+
+// file uploads, mailer

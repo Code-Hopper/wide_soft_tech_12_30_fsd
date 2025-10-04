@@ -1,11 +1,20 @@
+import jwt from "jsonwebtoken"
+import { userModel } from "../models/userSchema.js"
+
 let checkAdmin = async (req, res, next) => {
     try {
+        let { token } = req.headers
 
-        // decoded token
+        if (!token) throw ("not a valid token !")
 
-        console.log(req.headers)
-        let { admin } = req.headers
-        if (!admin) throw ("not a valid admin !")
+        let decode = jwt.verify(token, process.env.JWT_SECRET)
+
+        let validUser = await userModel.findOne({ "email": decode.email })
+
+        if (!validUser) throw ("not a valid user !")
+
+        req.user = validUser
+
         next()
     } catch (err) {
         console.log("error from checkAdmin middleware : ", err)
@@ -14,11 +23,3 @@ let checkAdmin = async (req, res, next) => {
 }
 
 export { checkAdmin }
-
-// form data(body), json(body), query,path, header, 
-
-// login -> token -> token as header -> actions
-
-// register / login 
-
-// encryption (Bcrypt), token(JWT), sessions, otp(email)[nodemailer-SMTP], auth 

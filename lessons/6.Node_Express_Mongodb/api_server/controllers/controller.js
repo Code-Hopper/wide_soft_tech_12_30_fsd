@@ -182,6 +182,8 @@ const getLanguageBasedOnId = (req, res) => {
 const postAddLanaguage = async (req, res) => {
     try {
 
+        if (!req.user) throw ("trying to add a language without login ! Please login first.")
+
         let { title, scope, duration, difficulties } = req.body
 
         // scope has to be ann array
