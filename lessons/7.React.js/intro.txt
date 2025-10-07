@@ -1,0 +1,37 @@
+React.js | js based library
+
+VDOM
+
+html
+    head
+    body
+        element1
+            v-dom(react development server)
+                element1
+                element1
+                element1
+
+faster
+
+SPA
+
+components(functional, classes based) | controlled, uncotrolled, state, hooks[useState, useEffect, useContext, custom], jsx, etc....
+
+file.jsx -> JavaScript XML- extensible markup language
+
+Magento, Laravel, Wordpress, 
+
+Web 2.0
+
+how setup
+vite, CRA (react cli)
+
+development server | node.js
+
+file stru.
+component
+style(css, bootstrap, tailwind, sass)
+hooks
+controlled/uncotrolled components
+how to make a api call
+router
