@@ -1,0 +1,43 @@
+.language-grid {
+    width: 100%;
+    padding: 2rem;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 2rem;
+
+        .grid-item {
+            min-height: 200px;
+            border: 1px solid rgba(0, 0, 0, .25);
+            padding: 1rem;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .title {
+                font-size: 1.25rem;
+                font-weight: bolder;
+            }
+
+            .scope {
+                border: 1px solid rgba(0, 0, 0, .15);
+                padding: 0.25rem;
+            }
+
+            .duration,
+            .difficulties {
+                display: inline-flex;
+                flex-direction: column;
+                gap: .25rem;
+
+                >span:first-child {
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+}
