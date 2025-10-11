@@ -1,68 +1,43 @@
 import React, { useState } from 'react'
 import "./styles/style.scss"
-const AddLanuage = () => {
+const AddLanuage = (props) => {
 
     let [formData, setFormData] = useState({
-        title: "", scope: "", difficulties: "", duration: ""
+        title: "", scope: [], difficulties: "", duration: ""
     })
-
-    let [title, setTitle] = useState("")
-    let [scope, setScope] = useState("")
-    let [difficulties, setDifficulties] = useState("")
-    let [duration, setDuration] = useState("")
 
     const handleSumbit = (event) => {
         event.preventDefault()
-        console.log('title : ', title)
-        console.log('scope : ', scope)
-        console.log('duration : ', duration)
-        console.log('difficulties : ', difficulties)
-
-        console.log({
-            title, scope, difficulties, duration
-        })
-
-    }
-
-    const handleTitleChange = (e) => {
-        let value = e.target.value
-        setTitle(() => {
-            return value
+        console.log(formData)
+        props.dataSetLanguagesHandler((prev) => {
+            return [formData, ...prev]
         })
     }
 
-    const handleScopeChange = (e) => {
-        let value = e.target.value
-        setScope(() => {
-            return value
-        })
-    }
+    const handleChange = (e) => {
+        let { name, value } = e.target
 
-    const handleDurationChange = (e) => {
-        let value = e.target.value
-        setDuration(() => {
-            return value
-        })
-    }
+        if (name == "scope") {
+            value = value.split(",")
+            value = value.map((item) => { return item.trim() })
+        }
 
-    const handleDifficultiesChange = (e) => {
-        let value = e.target.value
-        setDifficulties(() => {
-            return value
+        setFormData((prev) => {
+            return { ...prev, [name]: value }
         })
     }
 
     return (
         <div className='add-language-form'>
             <h1 className='my-10 text-center font-bold'>Add Language !</h1>
-            <form onSubmit={handleSumbit} className='flex flex-col items-center bg-black gap-4 p-3'>
+            <form onSubmit={handleSumbit} className='flex flex-col items-center gap-4 p-3'>
 
-                <input onChange={handleTitleChange} type="text" placeholder='title' value={title} />
-                <input onChange={handleDurationChange} type="text" placeholder='duration' value={duration} />
-                <input onChange={handleScopeChange} type="text" placeholder='scope' value={scope} />
-                <input onChange={handleDifficultiesChange} type="text" placeholder='difficulties' value={difficulties} />
+                <input className='p-2 border border-x-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 transition' onChange={handleChange} type="text" name='title' placeholder='title' value={formData.title} />
+                <input className='p-2 border border-x-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 transition' onChange={handleChange} type="text" name='duration' placeholder='duration' value={formData.duration} />
+                <input className='p-2 border border-x-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 transition' onChange={handleChange} type="text" name='scope' placeholder='scope' value={formData.scope} />
+                <input className='p-2 border border-x-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 transition' onChange={handleChange} type="text" name='difficulties' placeholder='difficulties' value={formData.difficulties} />
 
-                <button className='bg-green-500 font-bold text-white hover:bg-green-700 p-2 transition-all'>Add Language !</button>
+                <button className='bg-green-500 font-bold text-white hover:bg-green-700 px-5 py-2 transition-all'>Add Language !</button>
             </form>
         </div>
     )

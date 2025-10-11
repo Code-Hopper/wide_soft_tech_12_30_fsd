@@ -1,18 +1,13 @@
 import React, { useState } from 'react'
 import "./styles/style.scss"
 
-import { languages } from "./Dataset.js"
-
-const LanugageGrid = () => {
-
-    let [data, setData] = useState(languages)
-
+const LanugageGrid = (props) => {
     return (
         <div className='language-grid'>
             <h1 className='font-bold text-3xl text-center my-10'>Language Grid !</h1>
             <div className='grid-container'>
                 {
-                    data.map((item, index) => {
+                    props.dataSetLanguages.map((item, index) => {
                         return (
                             <div key={index} className='grid-item'>
                                 <h1 className='title'>{item.title}</h1>
@@ -32,7 +27,7 @@ const LanugageGrid = () => {
                                 </h2>
                                 <h2 className='difficulties'>
                                     <span>Difficulties : </span>
-                                    <span className={item.difficulties == "Hard" ? "bg-red-400 p-2" : item.difficulties == "Easy" ? "bg-green-400 p-2" : item.difficulties == "Medium" ? "bg-yellow-300 p-2" : null} >
+                                    <span className={item.difficulties.toLowerCase() == "Hard".toLowerCase() ? "bg-red-400 p-2" : item.difficulties.toLowerCase() == "Easy".toLowerCase() ? "bg-green-400 p-2" : item.difficulties.toLowerCase() == "Medium".toLowerCase() ? "bg-yellow-300 p-2" : null} >
                                         {item.difficulties}
                                     </span>
                                 </h2>
