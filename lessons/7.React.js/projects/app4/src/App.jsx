@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LanugageGrid from './components/LanugageGrid.jsx';
 import AddLanuage from './components/AddLanuage.jsx';
-import axios from 'axios';
+import { fetchData } from "./api/test.js"
 
 import { languages } from './components/Dataset.js';
 
@@ -11,22 +11,28 @@ const App = () => {
 
   let [responseData, setResponseData] = useState(null)
 
-  async function fetchData() {
-    try {
-      
-      let result = await axios({
-        method: "GET",
-        url: "http://localhost:5004/test/hello"
-      })
+  useEffect(() => {
+    // alert("page has been mounted !")
 
-      console.log(result.data)
-      
-      setResponseData(result.data)
-
-    } catch (err) {
-      console.log("error while connecting to backend : ", err)
+    async function getTestData() {
+      try {
+        let response = await fetchData()
+        setResponseData(response.data)
+      } catch (err) {
+        console.log("error while getting data : ", err)
+      }
     }
-  }
+
+    getTestData()
+  }, [])
+
+  // when we need synchronize output/fetching we use effect hook
+
+  // whenever a page/component is mounted/re-mounted(refresh)/or changes in dependencies array the effect hook calls itself
+
+  // we have addedd responseData in dependecy array so if repsonseData changes the effect hook will call itself again
+
+  // similary we can have multiple dyanmic data within the dependency array
 
   return (
     <>
