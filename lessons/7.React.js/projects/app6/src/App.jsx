@@ -5,6 +5,10 @@ import Home from './components/pages/Home'
 import About from './components/pages/About'
 import Contact from './components/pages/Contact'
 import Service from "./components/pages/Service"
+import Dashboard from './components/pages/Dashboard'
+import SettingComponent from './components/sections/DashboardComponents/SettingComponent'
+import ProfileComponent from './components/sections/DashboardComponents/ProfileComponent'
+
 
 const App = () => {
   return (
@@ -15,6 +19,10 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/service/:servicename' element={<Service />} />
+          <Route path='/dashboard/:name' element={<Dashboard />}>
+            <Route path='setting' element={<SettingComponent />} />
+            <Route path='profile' element={<ProfileComponent />} />
+          </Route>
         </Routes>
       </Router>
     </>
@@ -22,12 +30,3 @@ const App = () => {
 }
 
 export default App
-
-// /-> home
-// /about - about page
-// /services - services page
-// /service/:serviceName - nameservice page
-
-// React Router
-
-// SPA -> Multi Page Application
