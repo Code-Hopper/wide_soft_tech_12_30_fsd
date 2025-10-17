@@ -30,3 +30,15 @@ const App = () => {
 }
 
 export default App
+
+// topics to learn pratice in react
+// setup CRA / VITE (intro REACT, SPA, VDOM, CSR)
+// Style (style object, css, sass, bootstrap, tailwind(3.x.x))
+// Components
+// Conditioanl Rendering (useState)
+// Controlled Components 
+// How to a API call from a react site (axios)
+// props objects
+// useEffect hook
+// Context API (Context Hook)
+// React Router Dom (Router setup, Path Parameter(useParams), Nasted Routes(Outlet),useNavigation)
